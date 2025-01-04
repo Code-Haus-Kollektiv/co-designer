@@ -1,0 +1,64 @@
+{
+  "version": 2,
+  "dgSpecHash": "JVGt6rdhIoILzSPHDxvm78HIb5qTAKSjD+tbVgmKST4sBwz1fSIFcEVZovXm+F+/p6ncH8ZXZpVkZOdi1ZDkJA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\simon\\Dropbox\\03. WebDev\\co-designer\\WP_1_Data_Preparation\\ProcessGrasshopperFiles\\ProcessGrasshopperFiles.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\simon\\.nuget\\packages\\grasshopper\\7.0.19274.12465-wip\\grasshopper.7.0.19274.12465-wip.nupkg.sha512",
+    "C:\\Users\\simon\\.nuget\\packages\\rhino.inside\\0.1.1\\rhino.inside.0.1.1.nupkg.sha512",
+    "C:\\Users\\simon\\.nuget\\packages\\rhinocommon\\7.0.19274.12465-wip\\rhinocommon.7.0.19274.12465-wip.nupkg.sha512",
+    "C:\\Users\\simon\\.nuget\\packages\\rhinowindows\\7.0.19274.12465-wip\\rhinowindows.7.0.19274.12465-wip.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1604",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Project dependency Rhino.Inside does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.",
+      "libraryId": "Rhino.Inside",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Grasshopper 7.0.19274.12465-wip' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Grasshopper",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Rhino.Inside 0.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Rhino.Inside",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'RhinoCommon 7.0.19274.12465-wip' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "RhinoCommon",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'RhinoWindows 7.0.19274.12465-wip' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "RhinoWindows",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "Grasshopper/7.0.19274.12465-wip": {
+        "type": "package",
+        "dependencies": {
+          "RhinoCommon": "[7.0.19274.12465-wip]"
+        },
+        "compile": {
+          "lib/net45/GH_IO.dll": {
+            "related": ".XML"
+          },
+          "lib/net45/Grasshopper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/_._": {
+            "related": ".XML"
+          }
+        },
+        "build": {
+          "build/net45/_._": {}
+        }
+      },
+      "Rhino.Inside/0.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Grasshopper": "7.0.19274.12465-wip",
+          "RhinoCommon": "7.0.19274.12465-wip",
+          "RhinoWindows": "7.0.19274.12465-wip"
+        },
+        "compile": {
+          "lib/net45/RhinoInside.dll": {}
+        },
+        "runtime": {
+          "lib/net45/RhinoInside.dll": {}
+        }
+      },
+      "RhinoCommon/7.0.19274.12465-wip": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Eto.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/Rhino.UI.dll": {},
+          "lib/net45/RhinoCommon.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/net45/_._": {}
+        }
+      },
+      "RhinoWindows/7.0.19274.12465-wip": {
+        "type": "package",
+        "dependencies": {
+          "RhinoCommon": "[7.0.19274.12465-wip]"
+        },
+        "compile": {
+          "lib/net45/Eto.Wpf.dll": {},
+          "lib/net45/RhinoWindows.dll": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        },
+        "build": {
+          "build/net45/_._": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Grasshopper/7.0.19274.12465-wip": {
+      "sha512": "PbSU24rhs77LeWUEb6fVp7kkMGvLQjSb3bbjQGZT3bEEKfDJ51BYP7wgpRpDCI5alo1Dz2cCqR0zgmpmOre1Ng==",
+      "type": "package",
+      "path": "grasshopper/7.0.19274.12465-wip",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net45/Grasshopper.targets",
+        "grasshopper.7.0.19274.12465-wip.nupkg.sha512",
+        "grasshopper.nuspec",
+        "lib/net45/GH_IO.XML",
+        "lib/net45/GH_IO.dll",
+        "lib/net45/Grasshopper.dll",
+        "lib/net45/Grasshopper.xml"
+      ]
+    },
+    "Rhino.Inside/0.1.1": {
+      "sha512": "dfDn9za3/YIYduOraRirgYKY454yVqB+Wp41WqKCQrwfmrxy0V48ZkZru4buWa7ruVt9M1OE037ePgBRwF026w==",
+      "type": "package",
+      "path": "rhino.inside/0.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/RhinoInside.dll",
+        "rhino.inside.0.1.1.nupkg.sha512",
+        "rhino.inside.nuspec"
+      ]
+    },
+    "RhinoCommon/7.0.19274.12465-wip": {
+      "sha512": "H6j53PZ0MnSoTjUbpP+sMSp2Xhkc9LD/k39ZBIJaF37M4L4BFxD3rLWrcvbodlVfJ8+8EBKnL6SdZbn+T89hYA==",
+      "type": "package",
+      "path": "rhinocommon/7.0.19274.12465-wip",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Eto-LICENSE.txt",
+        "build/net45/RhinoCommon.targets",
+        "lib/net45/Eto.dll",
+        "lib/net45/Eto.xml",
+        "lib/net45/Rhino.UI.dll",
+        "lib/net45/RhinoCommon.XML",
+        "lib/net45/RhinoCommon.dll",
+        "rhinocommon.7.0.19274.12465-wip.nupkg.sha512",
+        "rhinocommon.nuspec"
+      ]
+    },
+    "RhinoWindows/7.0.19274.12465-wip": {
+      "sha512": "8IJ6wQS+JkneOmJ7h8DkcKVRDyfttLm85IPzlZhJRGoTdQCExxjUUyM/L6FunArz4m58cq4NC44SWrel2Brn9A==",
+      "type": "package",
+      "path": "rhinowindows/7.0.19274.12465-wip",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Eto-LICENSE.txt",
+        "build/net45/RhinoWindows.targets",
+        "lib/net45/Eto.Wpf.dll",
+        "lib/net45/RhinoWindows.dll",
+        "rhinowindows.7.0.19274.12465-wip.nupkg.sha512",
+        "rhinowindows.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "Rhino.Inside"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\simon\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\simon\\Dropbox\\03. WebDev\\co-designer\\WP_1_Data_Preparation\\ProcessGrasshopperFiles\\ProcessGrasshopperFiles.csproj",
+      "projectName": "ProcessGrasshopperFiles",
+      "projectPath": "C:\\Users\\simon\\Dropbox\\03. WebDev\\co-designer\\WP_1_Data_Preparation\\ProcessGrasshopperFiles\\ProcessGrasshopperFiles.csproj",
+      "packagesPath": "C:\\Users\\simon\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\simon\\Dropbox\\03. WebDev\\co-designer\\WP_1_Data_Preparation\\ProcessGrasshopperFiles\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\simon\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "dependencies": {
+          "Rhino.Inside": {
+            "target": "Package",
+            "version": "(, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.410\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1604",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Project dependency Rhino.Inside does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.",
+      "libraryId": "Rhino.Inside",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Grasshopper 7.0.19274.12465-wip' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Grasshopper",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Rhino.Inside 0.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Rhino.Inside",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'RhinoCommon 7.0.19274.12465-wip' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "RhinoCommon",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'RhinoWindows 7.0.19274.12465-wip' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "RhinoWindows",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
+}
