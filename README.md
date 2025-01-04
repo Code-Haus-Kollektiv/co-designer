@@ -1,6 +1,6 @@
 # Grasshopper Co-designer
 
-Grasshopper Co-designer is a plugin for Rhino / Grasshopper that leverages a large language model (LLM) to assist computational designers in rapidly creating Grasshopper files. By predicting the next component in your workflow, it acts as a helpful assistant, streamlining the design process, enhancing productivity and teaching beginners. We were inspired by GitHub Copilot wanted a more visual approach for computational designer using Grasshopper.
+Grasshopper Co-designer is a plugin for Rhino / Grasshopper that leverages a large language model (LLM) to assist computational designers in rapidly creating Grasshopper files. By predicting the next component in your workflow, it acts as a helpful assistant, streamlining the design process, enhancing productivity and teaching beginners.
 
 ---
 
