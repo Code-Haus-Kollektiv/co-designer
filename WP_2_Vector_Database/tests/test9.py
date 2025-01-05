@@ -6,33 +6,48 @@ from langchain_ollama import ChatOllama
 from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.prompts import ChatPromptTemplate
-import pydantic
+from typing import Optional
+from pydantic import BaseModel, Field
 
 # Define JSON schema
-with open(r'WP_2_Vector_Database\output\output_schema.json', 'r') as schema_file:
-    json_schema = json.load(schema_file)
+class NextComponent(BaseModel):
+    """
+    Represents the next connected component.
+    """
+    name: str
+    """Name of the component."""
 
-# Create system prompt
-system_prompt = (
-    "You are a copilot for Rhino Grasshopper. Your task is to predict the next component in the design process. "
-    "\n\n"
-    "{context}"
-)
+    description: str
+    """Description of the component."""
 
-# Create prompt template for input and context
-prompt = ChatPromptTemplate.from_messages(
-    [
-        ("system", system_prompt),
-        ("human", "{input}"),
-    ]
-)
-query = "Give me the next component in the design process if my current component is a 'Curve' Return only a JSON"
+    id: str
+    """GUID of the component."""
+
+
+# # Create system prompt
+# system_prompt = (
+#     "You are a copilot for Rhino Grasshopper. Your task is to predict the next component in the design process. "
+#     "\n\n"
+#     "{context}"
+# )
+
+# # Create prompt template for input and context
+# prompt = ChatPromptTemplate.from_messages(
+#     [
+#         ("system", system_prompt),
+#         ("human", "{input}"),
+#     ]
+# )
+# query = "Give me the next component in the design process if my current component is a 'Curve' Return only a JSON"
+
+query = "You are a copilot for Rhino Grasshopper. Your task is to predict the next component in the design process. Give me the next component in the design process if my current component is a 'Curve' Return only a JSON"
+
 
 # Initialize Ollama Chat model
 ollama = ChatOllama(model="llama3.2:latest")
 
 # Set structured output using the updated JSON schema
-structured_ollama = ollama.with_structured_output(json_schema, method="json_mode")
+structured_ollama = ollama.with_structured_output(NextComponent)
 
 # result = structured_ollama.invoke(query)
 # print(result)
