@@ -1,0 +1,2649 @@
+{
+  "Id": "777697b0-93f2-4c98-a11a-5684e79df753",
+  "Title": "wnXBSabIalM2uWIepqz0FMwAtgC",
+  "Description": "A json object of a Grasshopper file, containing JSON objects of all the 26 IGH_Component.",
+  "FileName": "wnXBSabIalM2uWIepqz0FMwAtgC.gh",
+  "AuthorName": "martinsiegrist",
+  "AuthorLikes": 3752,
+  "AuthorPostCount": 2,
+  "TopicName": "Offset curve in dome",
+  "ObjectCount": 26,
+  "CreatedAt": "2024-12-27T12:40:41.719+01:00",
+  "PostUrl": "https://discourse.mcneel.com/t/offset-curve-in-dome/197031/2",
+  "Components": [
+    {
+      "Id": "dabc854d-f50e-408a-b001-d043c7de151d",
+      "InstanceId": "ab02fb07-4d9d-4b55-927a-76c0abaa9d0e",
+      "Name": "Sphere",
+      "Nickname": "Sph",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "Create a spherical surface.",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Surface",
+      "SubCategory": "Primitive",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "4f8984c4-7c7a-4d69-b0a2-183cbb330d20",
+          "InstanceId": "c453579d-5d2e-43ad-8380-b3f1dce35968",
+          "Name": "Base",
+          "Nickname": "B",
+          "Description": "Base plane",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Plane",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "4f8984c4-7c7a-4d69-b0a2-183cbb330d20"
+          ],
+          "ConnectedInstanceIds": [
+            "9c1ed9e5-c3c5-42f8-88e2-2c5b1ed9b08d"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "3e8ca6be-fda8-4aaf-b5c0-3c54c8bb7312",
+          "InstanceId": "9ed7728b-9798-41a8-b333-b2f60add3275",
+          "Name": "Radius",
+          "Nickname": "R",
+          "Description": "Sphere radius",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Number",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "57da07bd-ecab-415d-9d86-af36d7073abc"
+          ],
+          "ConnectedInstanceIds": [
+            "810a930a-3f1a-43a7-86d4-1f4b98d0e99c"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "deaf8653-5528-4286-807c-3de8b8dad781",
+          "InstanceId": "8d09df0f-fb2a-458a-afee-ed7628959394",
+          "Name": "Sphere",
+          "Nickname": "S",
+          "Description": "Resulting sphere",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Surface",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "919e146f-30ae-4aae-be34-4d72f555e7da",
+            "ac2bc2cb-70fb-4dd5-9c78-7e1ea97fe278"
+          ],
+          "ConnectedInstanceIds": [
+            "dc9aca50-cdb6-43db-84ba-37df94359856",
+            "bfc1037a-2a96-4815-8ea2-5ff1e478ecfa"
+          ],
+          "ConnectedCount": 2
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 581.0,
+        "Y": 198.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "f1d28eeb-c3f6-47ce-a960-2db91135ff94",
+        "Name": "Surface Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for surface, brep and mesh operations"
+      },
+      "DocumentInstanceId": "777697b0-93f2-4c98-a11a-5684e79df753"
+    },
+    {
+      "Id": "3a0c7bda-3d22-4588-8bab-03f57a52a6ea",
+      "InstanceId": "439a447d-fda3-45e9-9880-cecd4bf775be",
+      "Name": "Plane Offset",
+      "Nickname": "Pl Offset",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "Offset a plane.",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Vector",
+      "SubCategory": "Plane",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "4f8984c4-7c7a-4d69-b0a2-183cbb330d20",
+          "InstanceId": "ca8254e2-3f03-43dc-b3dc-1fec7c3c151e",
+          "Name": "Base Plane",
+          "Nickname": "P",
+          "Description": "Base plane for offset",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Plane",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "4f8984c4-7c7a-4d69-b0a2-183cbb330d20"
+          ],
+          "ConnectedInstanceIds": [
+            "c8dfdf73-95c1-43ee-8ed1-24dc14bfc827"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "3e8ca6be-fda8-4aaf-b5c0-3c54c8bb7312",
+          "InstanceId": "bfa1f204-dc2d-4880-8f70-7fa370b19a65",
+          "Name": "Offset",
+          "Nickname": "O",
+          "Description": "Offset distance (along base plane z-axis",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Number",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "57da07bd-ecab-415d-9d86-af36d7073abc"
+          ],
+          "ConnectedInstanceIds": [
+            "424ea304-b9be-45bc-961d-3120ce3b96b6"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "4f8984c4-7c7a-4d69-b0a2-183cbb330d20",
+          "InstanceId": "9c1ed9e5-c3c5-42f8-88e2-2c5b1ed9b08d",
+          "Name": "Plane",
+          "Nickname": "Pl",
+          "Description": "Offset plane",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Plane",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "4f8984c4-7c7a-4d69-b0a2-183cbb330d20",
+            "fbac3e32-f100-4292-8692-77240a42fd1a",
+            "fbac3e32-f100-4292-8692-77240a42fd1a"
+          ],
+          "ConnectedInstanceIds": [
+            "c453579d-5d2e-43ad-8380-b3f1dce35968",
+            "b04f3f09-45e3-4e44-afb3-2091bea64a62",
+            "df4c86a2-66a0-4f15-93a0-a4014663bb59"
+          ],
+          "ConnectedCount": 3
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 327.0,
+        "Y": 188.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "6029726d-3429-42ad-8023-62e9c9cf94ec",
+        "Name": "Vector Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for point, vector and plane operations"
+      },
+      "DocumentInstanceId": "777697b0-93f2-4c98-a11a-5684e79df753"
+    },
+    {
+      "Id": "17b7152b-d30d-4d50-b9ef-c9fe25576fc2",
+      "InstanceId": "b6dee91b-f71f-4d11-b41e-dcd176aa4a04",
+      "Name": "XY Plane",
+      "Nickname": "XY",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "World XY plane.",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Vector",
+      "SubCategory": "Plane",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "fbac3e32-f100-4292-8692-77240a42fd1a",
+          "InstanceId": "f44e6562-3358-4fc8-881d-87acd3af3c07",
+          "Name": "Origin",
+          "Nickname": "O",
+          "Description": "Origin of plane",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Point",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        },
+        {
+          "Id": "4f8984c4-7c7a-4d69-b0a2-183cbb330d20",
+          "InstanceId": "c8dfdf73-95c1-43ee-8ed1-24dc14bfc827",
+          "Name": "Plane",
+          "Nickname": "P",
+          "Description": "World XY plane",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Plane",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "4f8984c4-7c7a-4d69-b0a2-183cbb330d20",
+            "4f8984c4-7c7a-4d69-b0a2-183cbb330d20"
+          ],
+          "ConnectedInstanceIds": [
+            "ca8254e2-3f03-43dc-b3dc-1fec7c3c151e",
+            "e0f88b1a-edcf-41c7-8ebc-97151c612004"
+          ],
+          "ConnectedCount": 2
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 214.0,
+        "Y": 146.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "6029726d-3429-42ad-8023-62e9c9cf94ec",
+        "Name": "Vector Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for point, vector and plane operations"
+      },
+      "DocumentInstanceId": "777697b0-93f2-4c98-a11a-5684e79df753"
+    },
+    {
+      "Id": "ef6b26f4-f820-48d6-b0c5-85898ef8888b",
+      "InstanceId": "ad2d006a-44a3-4dd7-85c0-f593e0ab421a",
+      "Name": "Split Brep",
+      "Nickname": "Split",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "Split one brep with another.",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Intersect",
+      "SubCategory": "Shape",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "919e146f-30ae-4aae-be34-4d72f555e7da",
+          "InstanceId": "dc9aca50-cdb6-43db-84ba-37df94359856",
+          "Name": "Brep",
+          "Nickname": "B",
+          "Description": "Brep to split",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Brep",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "deaf8653-5528-4286-807c-3de8b8dad781"
+          ],
+          "ConnectedInstanceIds": [
+            "8d09df0f-fb2a-458a-afee-ed7628959394"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "919e146f-30ae-4aae-be34-4d72f555e7da",
+          "InstanceId": "f7272cfd-471f-48b9-9eb2-5b154d10c4e2",
+          "Name": "Cutter",
+          "Nickname": "C",
+          "Description": "Cutting shape",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Brep",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "deaf8653-5528-4286-807c-3de8b8dad781"
+          ],
+          "ConnectedInstanceIds": [
+            "fb3b2dd4-b270-49c8-b00b-dd754d7ca95e"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "919e146f-30ae-4aae-be34-4d72f555e7da",
+          "InstanceId": "c0307552-ca1c-4569-9092-631810fa1e20",
+          "Name": "Result",
+          "Nickname": "R",
+          "Description": "Brep fragments",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Brep",
+          "Access": "list",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "c9482db6-bea9-448d-98ff-fed6d69a8efc",
+            "8ec86459-bf01-4409-baee-174d0d2b13d0"
+          ],
+          "ConnectedInstanceIds": [
+            "9fb84ea8-60cd-48c5-90a7-03e2cab4142f",
+            "3fc85d5f-0045-496c-8d3a-c5f3f68c7d9b"
+          ],
+          "ConnectedCount": 2
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 832.0,
+        "Y": 208.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "f1d28eeb-c3f6-47ce-a960-2db91135ff94",
+        "Name": "Surface Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for surface, brep and mesh operations"
+      },
+      "DocumentInstanceId": "777697b0-93f2-4c98-a11a-5684e79df753"
+    },
+    {
+      "Id": "d8698126-0e91-4ae7-ba05-2490258573ea",
+      "InstanceId": "25f1dcd4-6b3d-4dfa-9fb1-ee7bf69cf709",
+      "Name": "Plane Through Shape",
+      "Nickname": "PxS",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "Make a rectangular surface that is larger than a given shape.",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Surface",
+      "SubCategory": "Primitive",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "4f8984c4-7c7a-4d69-b0a2-183cbb330d20",
+          "InstanceId": "e0f88b1a-edcf-41c7-8ebc-97151c612004",
+          "Name": "Plane",
+          "Nickname": "P",
+          "Description": "Surface plane",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Plane",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "4f8984c4-7c7a-4d69-b0a2-183cbb330d20"
+          ],
+          "ConnectedInstanceIds": [
+            "c8dfdf73-95c1-43ee-8ed1-24dc14bfc827"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "ac2bc2cb-70fb-4dd5-9c78-7e1ea97fe278",
+          "InstanceId": "bfc1037a-2a96-4815-8ea2-5ff1e478ecfa",
+          "Name": "Shape",
+          "Nickname": "S",
+          "Description": "Shape to exceed",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Geometry",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "deaf8653-5528-4286-807c-3de8b8dad781"
+          ],
+          "ConnectedInstanceIds": [
+            "8d09df0f-fb2a-458a-afee-ed7628959394"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "3e8ca6be-fda8-4aaf-b5c0-3c54c8bb7312",
+          "InstanceId": "03e481bd-12c3-43f4-a97c-ff02211f1644",
+          "Name": "Inflate",
+          "Nickname": "I",
+          "Description": "Boundary inflation amount",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Number",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        },
+        {
+          "Id": "deaf8653-5528-4286-807c-3de8b8dad781",
+          "InstanceId": "fb3b2dd4-b270-49c8-b00b-dd754d7ca95e",
+          "Name": "Surface",
+          "Nickname": "S",
+          "Description": "Resulting planar surface",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Surface",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "919e146f-30ae-4aae-be34-4d72f555e7da"
+          ],
+          "ConnectedInstanceIds": [
+            "f7272cfd-471f-48b9-9eb2-5b154d10c4e2"
+          ],
+          "ConnectedCount": 1
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 698.0,
+        "Y": 130.0
+      },
+      "Message": "Total",
+      "Plugin": {
+        "Id": "f1d28eeb-c3f6-47ce-a960-2db91135ff94",
+        "Name": "Surface Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for surface, brep and mesh operations"
+      },
+      "DocumentInstanceId": "777697b0-93f2-4c98-a11a-5684e79df753"
+    },
+    {
+      "Id": "af9cdb9d-9617-4827-bb3c-9efd88c76a70",
+      "InstanceId": "54edabe0-83e1-4fe1-b56a-44234b19ed50",
+      "Name": "Box Properties",
+      "Nickname": "BoxProp",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "Get some properties of a box",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Surface",
+      "SubCategory": "Analysis",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "c9482db6-bea9-448d-98ff-fed6d69a8efc",
+          "InstanceId": "9fb84ea8-60cd-48c5-90a7-03e2cab4142f",
+          "Name": "Box",
+          "Nickname": "B",
+          "Description": "Box to analyze",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Box",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "919e146f-30ae-4aae-be34-4d72f555e7da"
+          ],
+          "ConnectedInstanceIds": [
+            "c0307552-ca1c-4569-9092-631810fa1e20"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "fbac3e32-f100-4292-8692-77240a42fd1a",
+          "InstanceId": "66bd123d-40ea-4e20-a218-465dbaccac6e",
+          "Name": "Center",
+          "Nickname": "C",
+          "Description": "Center point of box",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Point",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "fbac3e32-f100-4292-8692-77240a42fd1a"
+          ],
+          "ConnectedInstanceIds": [
+            "2f8e1bd2-bed5-434e-b4b3-0a553aaaeb9d"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "16ef3e75-e315-4899-b531-d3166b42dac9",
+          "InstanceId": "28626cec-7069-422a-81c1-9354f508a178",
+          "Name": "Diagonal",
+          "Nickname": "D",
+          "Description": "Diagonal vector of box",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Vector",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        },
+        {
+          "Id": "3e8ca6be-fda8-4aaf-b5c0-3c54c8bb7312",
+          "InstanceId": "fa72cd54-4ee8-41c5-ab36-1c1569db3776",
+          "Name": "Area",
+          "Nickname": "A",
+          "Description": "Area of box",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Number",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        },
+        {
+          "Id": "3e8ca6be-fda8-4aaf-b5c0-3c54c8bb7312",
+          "InstanceId": "79fc5ea9-8e59-406f-9764-0ca0be50501e",
+          "Name": "Volume",
+          "Nickname": "V",
+          "Description": "Volume of box",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Number",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        },
+        {
+          "Id": "2e3ab970-8545-46bb-836c-1c11e5610bce",
+          "InstanceId": "efd16fd7-8f40-4b55-9ca3-6377cc708b90",
+          "Name": "Degeneracy",
+          "Nickname": "d",
+          "Description": "Degeneracy of box",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Integer",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 959.0,
+        "Y": 113.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "f1d28eeb-c3f6-47ce-a960-2db91135ff94",
+        "Name": "Surface Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for surface, brep and mesh operations"
+      },
+      "DocumentInstanceId": "777697b0-93f2-4c98-a11a-5684e79df753"
+    },
+    {
+      "Id": "6f93d366-919f-4dda-a35e-ba03dd62799b",
+      "InstanceId": "0bfc6b2a-5d27-4e7f-90b6-1a1f19f6847c",
+      "Name": "Sort List",
+      "Nickname": "Sort",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "Sort a list of numeric keys.",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Sets",
+      "SubCategory": "List",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "3e8ca6be-fda8-4aaf-b5c0-3c54c8bb7312",
+          "InstanceId": "7e544432-b55a-4fa8-9b79-56c9b805d559",
+          "Name": "Keys",
+          "Nickname": "K",
+          "Description": "List of sortable keys",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Number",
+          "Access": "list",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "3e8ca6be-fda8-4aaf-b5c0-3c54c8bb7312"
+          ],
+          "ConnectedInstanceIds": [
+            "1a883ed4-1259-4126-94ae-54897f928914"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "8ec86459-bf01-4409-baee-174d0d2b13d0",
+          "InstanceId": "3fc85d5f-0045-496c-8d3a-c5f3f68c7d9b",
+          "Name": "Values A",
+          "Nickname": "A",
+          "Description": "Optional list of values to sort synchronously",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "list",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "919e146f-30ae-4aae-be34-4d72f555e7da"
+          ],
+          "ConnectedInstanceIds": [
+            "c0307552-ca1c-4569-9092-631810fa1e20"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "3e8ca6be-fda8-4aaf-b5c0-3c54c8bb7312",
+          "InstanceId": "adac6026-477b-4db7-860b-819c9012abca",
+          "Name": "Keys",
+          "Nickname": "K",
+          "Description": "Sorted keys",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Number",
+          "Access": "list",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        },
+        {
+          "Id": "8ec86459-bf01-4409-baee-174d0d2b13d0",
+          "InstanceId": "6a2e07a9-9ea8-400e-9484-dd39a5599020",
+          "Name": "Values A",
+          "Nickname": "A",
+          "Description": "Synchronous values in A",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "list",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "8ec86459-bf01-4409-baee-174d0d2b13d0"
+          ],
+          "ConnectedInstanceIds": [
+            "dacf293e-f66b-400b-9177-f89f8af398cb"
+          ],
+          "ConnectedCount": 1
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 1167.0,
+        "Y": 198.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "886f2422-b93f-4134-99c4-8a87bbad5fc4",
+        "Name": "Math Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for various mathematical and programmatic operations"
+      },
+      "DocumentInstanceId": "777697b0-93f2-4c98-a11a-5684e79df753"
+    },
+    {
+      "Id": "9abae6b7-fa1d-448c-9209-4a8155345841",
+      "InstanceId": "0ccd1bc8-64be-4137-9eca-d2fab626c4f0",
+      "Name": "Deconstruct",
+      "Nickname": "pDecon",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [
+        "XYZ",
+        "Decompose",
+        "Coordinates"
+      ],
+      "Description": "Deconstruct a point into its component parts.",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Vector",
+      "SubCategory": "Point",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "fbac3e32-f100-4292-8692-77240a42fd1a",
+          "InstanceId": "2f8e1bd2-bed5-434e-b4b3-0a553aaaeb9d",
+          "Name": "Point",
+          "Nickname": "P",
+          "Description": "Input point",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Point",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "fbac3e32-f100-4292-8692-77240a42fd1a"
+          ],
+          "ConnectedInstanceIds": [
+            "66bd123d-40ea-4e20-a218-465dbaccac6e"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "3e8ca6be-fda8-4aaf-b5c0-3c54c8bb7312",
+          "InstanceId": "19b55989-7f8f-4a2f-97e0-99e8617c82db",
+          "Name": "X component",
+          "Nickname": "X",
+          "Description": "Point {x} component",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Number",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        },
+        {
+          "Id": "3e8ca6be-fda8-4aaf-b5c0-3c54c8bb7312",
+          "InstanceId": "a8b52efd-723c-4e97-b4b6-86b68cc4fdc6",
+          "Name": "Y component",
+          "Nickname": "Y",
+          "Description": "Point {y} component",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Number",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        },
+        {
+          "Id": "3e8ca6be-fda8-4aaf-b5c0-3c54c8bb7312",
+          "InstanceId": "1a883ed4-1259-4126-94ae-54897f928914",
+          "Name": "Z component",
+          "Nickname": "Z",
+          "Description": "Point {z} component",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Number",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "3e8ca6be-fda8-4aaf-b5c0-3c54c8bb7312"
+          ],
+          "ConnectedInstanceIds": [
+            "7e544432-b55a-4fa8-9b79-56c9b805d559"
+          ],
+          "ConnectedCount": 1
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 1047.0,
+        "Y": 73.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "6029726d-3429-42ad-8023-62e9c9cf94ec",
+        "Name": "Vector Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for point, vector and plane operations"
+      },
+      "DocumentInstanceId": "777697b0-93f2-4c98-a11a-5684e79df753"
+    },
+    {
+      "Id": "59daf374-bc21-4a5e-8282-5504fb7ae9ae",
+      "InstanceId": "de06f0f4-a416-425a-840a-5a297580bdd0",
+      "Name": "List Item",
+      "Nickname": "Item",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "Retrieve a specific item from a list.",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Sets",
+      "SubCategory": "List",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "8ec86459-bf01-4409-baee-174d0d2b13d0",
+          "InstanceId": "dacf293e-f66b-400b-9177-f89f8af398cb",
+          "Name": "List",
+          "Nickname": "L",
+          "Description": "Base list",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "list",
+          "DataMapping": "None",
+          "IsReversed": true,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "8ec86459-bf01-4409-baee-174d0d2b13d0"
+          ],
+          "ConnectedInstanceIds": [
+            "6a2e07a9-9ea8-400e-9484-dd39a5599020"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "2e3ab970-8545-46bb-836c-1c11e5610bce",
+          "InstanceId": "e0908cbc-9619-4190-bebf-e44531072def",
+          "Name": "Index",
+          "Nickname": "i",
+          "Description": "Item index",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Integer",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        },
+        {
+          "Id": "cb95db89-6165-43b6-9c41-5702bc5bf137",
+          "InstanceId": "f7949501-a57f-4ee1-abf4-1364e590d908",
+          "Name": "Wrap",
+          "Nickname": "W",
+          "Description": "Wrap index to list bounds",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Boolean",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        },
+        {
+          "Id": "8ec86459-bf01-4409-baee-174d0d2b13d0",
+          "InstanceId": "cd96de5e-da8b-4c96-b85b-9115d42425b6",
+          "Name": "Item",
+          "Nickname": "i",
+          "Description": "Item at {i'}",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": false,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "919e146f-30ae-4aae-be34-4d72f555e7da",
+            "deaf8653-5528-4286-807c-3de8b8dad781",
+            "deaf8653-5528-4286-807c-3de8b8dad781"
+          ],
+          "ConnectedInstanceIds": [
+            "6a11942a-0551-4920-bf0e-152e1b3df847",
+            "48e764b3-8d88-4641-94a1-07d28495f501",
+            "622feb98-6716-4f47-8c9d-2151e7179f8d"
+          ],
+          "ConnectedCount": 3
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 1275.0,
+        "Y": 228.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "886f2422-b93f-4134-99c4-8a87bbad5fc4",
+        "Name": "Math Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for various mathematical and programmatic operations"
+      },
+      "DocumentInstanceId": "777697b0-93f2-4c98-a11a-5684e79df753"
+    },
+    {
+      "Id": "fad344bc-09b1-4855-a2e6-437ef5715fe3",
+      "InstanceId": "cc07b89b-0d41-4b9b-9730-babfc537eb61",
+      "Name": "YZ Plane",
+      "Nickname": "YZ",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "World YZ plane.",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Vector",
+      "SubCategory": "Plane",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "fbac3e32-f100-4292-8692-77240a42fd1a",
+          "InstanceId": "b04f3f09-45e3-4e44-afb3-2091bea64a62",
+          "Name": "Origin",
+          "Nickname": "O",
+          "Description": "Origin of plane",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Point",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "4f8984c4-7c7a-4d69-b0a2-183cbb330d20"
+          ],
+          "ConnectedInstanceIds": [
+            "9c1ed9e5-c3c5-42f8-88e2-2c5b1ed9b08d"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "4f8984c4-7c7a-4d69-b0a2-183cbb330d20",
+          "InstanceId": "35ec1d57-583a-4847-aedb-7ede90a75721",
+          "Name": "Plane",
+          "Nickname": "P",
+          "Description": "World YZ plane",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Plane",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "ac2bc2cb-70fb-4dd5-9c78-7e1ea97fe278"
+          ],
+          "ConnectedInstanceIds": [
+            "975619a5-ceb0-4806-a303-4237348bbdd8"
+          ],
+          "ConnectedCount": 1
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 612.0,
+        "Y": 325.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "6029726d-3429-42ad-8023-62e9c9cf94ec",
+        "Name": "Vector Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for point, vector and plane operations"
+      },
+      "DocumentInstanceId": "777697b0-93f2-4c98-a11a-5684e79df753"
+    },
+    {
+      "Id": "b7798b74-037e-4f0c-8ac7-dc1043d093e0",
+      "InstanceId": "71895d0b-df66-45d3-a37b-53d8c435b79a",
+      "Name": "Rotate",
+      "Nickname": "Rotate",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "Rotate an object in a plane.",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Transform",
+      "SubCategory": "Euclidean",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "ac2bc2cb-70fb-4dd5-9c78-7e1ea97fe278",
+          "InstanceId": "975619a5-ceb0-4806-a303-4237348bbdd8",
+          "Name": "Geometry",
+          "Nickname": "G",
+          "Description": "Base geometry",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Geometry",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "4f8984c4-7c7a-4d69-b0a2-183cbb330d20"
+          ],
+          "ConnectedInstanceIds": [
+            "35ec1d57-583a-4847-aedb-7ede90a75721"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "3e8ca6be-fda8-4aaf-b5c0-3c54c8bb7312",
+          "InstanceId": "f0a8de2c-ebdb-428b-ac42-e957b78c9a48",
+          "Name": "Angle",
+          "Nickname": "A",
+          "Description": "Rotation angle in degrees",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Number",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "57da07bd-ecab-415d-9d86-af36d7073abc"
+          ],
+          "ConnectedInstanceIds": [
+            "8f4677d0-896c-4940-9221-8f94f2379634"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "4f8984c4-7c7a-4d69-b0a2-183cbb330d20",
+          "InstanceId": "86df0443-9773-49a8-8a93-ae0298d0678d",
+          "Name": "Plane",
+          "Nickname": "P",
+          "Description": "Rotation plane",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Plane",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "4f8984c4-7c7a-4d69-b0a2-183cbb330d20"
+          ],
+          "ConnectedInstanceIds": [
+            "ad6c8812-d4c9-4ef5-b400-a9226fca17d0"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "ac2bc2cb-70fb-4dd5-9c78-7e1ea97fe278",
+          "InstanceId": "8a4c6cc0-2a7a-437f-8f9f-aaf339e53499",
+          "Name": "Geometry",
+          "Nickname": "G",
+          "Description": "Rotated geometry",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Geometry",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "4f8984c4-7c7a-4d69-b0a2-183cbb330d20"
+          ],
+          "ConnectedInstanceIds": [
+            "31f69336-cf0b-4a17-a474-3ddb19971995"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "28f40e48-e739-4211-91bd-f4aefa5965f8",
+          "InstanceId": "7d98bbf7-b935-4745-948b-54c71cf92b04",
+          "Name": "Transform",
+          "Nickname": "X",
+          "Description": "Transformation data",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Transform",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 775.0,
+        "Y": 345.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "ac1af2ec-b5e5-4188-92c2-7eccce783090",
+        "Name": "Transform Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for transformation and deformation operations"
+      },
+      "DocumentInstanceId": "777697b0-93f2-4c98-a11a-5684e79df753"
+    },
+    {
+      "Id": "8cc3a196-f6a0-49ea-9ed9-0cb343a3ae64",
+      "InstanceId": "469ce948-a10a-48f3-808d-457f393e4581",
+      "Name": "XZ Plane",
+      "Nickname": "XZ",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "World XZ plane.",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Vector",
+      "SubCategory": "Plane",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "fbac3e32-f100-4292-8692-77240a42fd1a",
+          "InstanceId": "df4c86a2-66a0-4f15-93a0-a4014663bb59",
+          "Name": "Origin",
+          "Nickname": "O",
+          "Description": "Origin of plane",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Point",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "4f8984c4-7c7a-4d69-b0a2-183cbb330d20"
+          ],
+          "ConnectedInstanceIds": [
+            "9c1ed9e5-c3c5-42f8-88e2-2c5b1ed9b08d"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "4f8984c4-7c7a-4d69-b0a2-183cbb330d20",
+          "InstanceId": "ad6c8812-d4c9-4ef5-b400-a9226fca17d0",
+          "Name": "Plane",
+          "Nickname": "P",
+          "Description": "World XZ plane",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Plane",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "4f8984c4-7c7a-4d69-b0a2-183cbb330d20"
+          ],
+          "ConnectedInstanceIds": [
+            "86df0443-9773-49a8-8a93-ae0298d0678d"
+          ],
+          "ConnectedCount": 1
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 608.0,
+        "Y": 370.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "6029726d-3429-42ad-8023-62e9c9cf94ec",
+        "Name": "Vector Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for point, vector and plane operations"
+      },
+      "DocumentInstanceId": "777697b0-93f2-4c98-a11a-5684e79df753"
+    },
+    {
+      "Id": "4fe828e8-fa95-4cc5-9a8c-c33856ecc783",
+      "InstanceId": "fd491892-b2e5-4623-9a8b-1b99956780e8",
+      "Name": "Brep | Plane",
+      "Nickname": "Sec",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "Solve intersection events for a Brep and a plane (otherwise known as section).",
+      "InstanceDescription": "This component is currently inactive.\r\nThis component is using parallel computing.",
+      "Category": "Intersect",
+      "SubCategory": "Mathematical",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "919e146f-30ae-4aae-be34-4d72f555e7da",
+          "InstanceId": "6a11942a-0551-4920-bf0e-152e1b3df847",
+          "Name": "Brep",
+          "Nickname": "B",
+          "Description": "Base Brep",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Brep",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "8ec86459-bf01-4409-baee-174d0d2b13d0"
+          ],
+          "ConnectedInstanceIds": [
+            "cd96de5e-da8b-4c96-b85b-9115d42425b6"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "4f8984c4-7c7a-4d69-b0a2-183cbb330d20",
+          "InstanceId": "31f69336-cf0b-4a17-a474-3ddb19971995",
+          "Name": "Plane",
+          "Nickname": "P",
+          "Description": "Section plane",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Plane",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "ac2bc2cb-70fb-4dd5-9c78-7e1ea97fe278"
+          ],
+          "ConnectedInstanceIds": [
+            "8a4c6cc0-2a7a-437f-8f9f-aaf339e53499"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "d5967b9f-e8ee-436b-a8ad-29fdcecf32d5",
+          "InstanceId": "e188d1d1-a7ee-4b80-b369-942a80da49a5",
+          "Name": "Curves",
+          "Nickname": "C",
+          "Description": "Section curves",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Curve",
+          "Access": "list",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "d5967b9f-e8ee-436b-a8ad-29fdcecf32d5",
+            "d5967b9f-e8ee-436b-a8ad-29fdcecf32d5"
+          ],
+          "ConnectedInstanceIds": [
+            "1a14dae4-4673-438e-a0e5-dd56eb190e68",
+            "9fb43bac-9b83-4300-a5da-9d3a997fb96e"
+          ],
+          "ConnectedCount": 2
+        },
+        {
+          "Id": "fbac3e32-f100-4292-8692-77240a42fd1a",
+          "InstanceId": "a50b03f8-cbf1-4018-8d0d-d5e99cad7c97",
+          "Name": "Points",
+          "Nickname": "P",
+          "Description": "Section points",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Point",
+          "Access": "list",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 1366.0,
+        "Y": 320.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "f1d28eeb-c3f6-47ce-a960-2db91135ff94",
+        "Name": "Surface Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for surface, brep and mesh operations"
+      },
+      "DocumentInstanceId": "777697b0-93f2-4c98-a11a-5684e79df753"
+    },
+    {
+      "Id": "983c7600-980c-44da-bc53-c804067f667f",
+      "InstanceId": "746e5438-908f-4507-8a8c-5fd47db91ac2",
+      "Name": "Perp Frames",
+      "Nickname": "PFrames",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "Generate a number of equally spaced, perpendicular frames along a curve.",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Curve",
+      "SubCategory": "Division",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "d5967b9f-e8ee-436b-a8ad-29fdcecf32d5",
+          "InstanceId": "1a14dae4-4673-438e-a0e5-dd56eb190e68",
+          "Name": "Curve",
+          "Nickname": "C",
+          "Description": "Curve to divide",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Curve",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "d5967b9f-e8ee-436b-a8ad-29fdcecf32d5"
+          ],
+          "ConnectedInstanceIds": [
+            "e188d1d1-a7ee-4b80-b369-942a80da49a5"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "2e3ab970-8545-46bb-836c-1c11e5610bce",
+          "InstanceId": "3d1fe9ac-862a-48eb-b510-a343853bec59",
+          "Name": "Count",
+          "Nickname": "N",
+          "Description": "Number of segments",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Integer",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        },
+        {
+          "Id": "cb95db89-6165-43b6-9c41-5702bc5bf137",
+          "InstanceId": "42f0e356-2ee6-449a-8e0d-cb8e4c1c72b9",
+          "Name": "Align",
+          "Nickname": "A",
+          "Description": "Align the frames",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Boolean",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        },
+        {
+          "Id": "4f8984c4-7c7a-4d69-b0a2-183cbb330d20",
+          "InstanceId": "3fd4a191-a5f3-4b0e-9ec4-a55c5aaf7986",
+          "Name": "Frames",
+          "Nickname": "F",
+          "Description": "Curve frames",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Plane",
+          "Access": "list",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "fbac3e32-f100-4292-8692-77240a42fd1a",
+            "4f8984c4-7c7a-4d69-b0a2-183cbb330d20"
+          ],
+          "ConnectedInstanceIds": [
+            "66d6a1ec-5a56-4d40-bf70-d44131c04a3d",
+            "134fa717-d076-4b2d-8b01-68846c3a3f27"
+          ],
+          "ConnectedCount": 2
+        },
+        {
+          "Id": "3e8ca6be-fda8-4aaf-b5c0-3c54c8bb7312",
+          "InstanceId": "ac8ecbdd-fda9-41ff-a6f7-5f8c01503229",
+          "Name": "Parameters",
+          "Nickname": "t",
+          "Description": "Parameter values at frame points",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Number",
+          "Access": "list",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 1539.0,
+        "Y": 349.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "6029726d-3429-42ad-8023-62e9c9cf94ec",
+        "Name": "Vector Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for point, vector and plane operations"
+      },
+      "DocumentInstanceId": "777697b0-93f2-4c98-a11a-5684e79df753"
+    },
+    {
+      "Id": "d93100b6-d50b-40b2-831a-814659dc38e3",
+      "InstanceId": "4c62fc00-a459-481c-9bf9-d26a4d450cbc",
+      "Name": "Rectangle",
+      "Nickname": "Rectangle",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "Create a rectangle on a plane",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Curve",
+      "SubCategory": "Primitive",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "4f8984c4-7c7a-4d69-b0a2-183cbb330d20",
+          "InstanceId": "da426d15-fafb-41b8-9e22-7de46f52780c",
+          "Name": "Plane",
+          "Nickname": "P",
+          "Description": "Rectangle base plane",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Plane",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "4f8984c4-7c7a-4d69-b0a2-183cbb330d20"
+          ],
+          "ConnectedInstanceIds": [
+            "a31590e5-0f97-41b9-bfd3-d62e4a7c948e"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "15b7afe5-d0d0-43e1-b894-34fcfe3be384",
+          "InstanceId": "8fc60336-575f-4a6a-9966-06a2ac907c49",
+          "Name": "X Size",
+          "Nickname": "X",
+          "Description": "Dimensions of rectangle in plane X direction.",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Domain",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "59e0b89a-e487-49f8-bab8-b5bab16be14c"
+          ],
+          "ConnectedInstanceIds": [
+            "c5ec8d70-721c-4d36-9227-dad9dae8246d"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "15b7afe5-d0d0-43e1-b894-34fcfe3be384",
+          "InstanceId": "3eeb6024-edc0-4588-bfd1-8be9f8b3c015",
+          "Name": "Y Size",
+          "Nickname": "Y",
+          "Description": "Dimensions of rectangle in plane Y direction.",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Domain",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "59e0b89a-e487-49f8-bab8-b5bab16be14c"
+          ],
+          "ConnectedInstanceIds": [
+            "0464307c-b046-43b9-b958-21e4b5f96651"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "3e8ca6be-fda8-4aaf-b5c0-3c54c8bb7312",
+          "InstanceId": "a06c8848-f4f1-46e4-abc2-d6ca95cc9dd8",
+          "Name": "Radius",
+          "Nickname": "R",
+          "Description": "Rectangle corner fillet radius",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Number",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        },
+        {
+          "Id": "8ec86459-bf01-4409-baee-174d0d2b13d0",
+          "InstanceId": "14cf479d-b004-4e20-ba2f-acf7acc59886",
+          "Name": "Rectangle",
+          "Nickname": "R",
+          "Description": "Rectangle",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "d5967b9f-e8ee-436b-a8ad-29fdcecf32d5"
+          ],
+          "ConnectedInstanceIds": [
+            "377cb9fd-19c7-4b8a-bc30-c26a2a9019d8"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "3e8ca6be-fda8-4aaf-b5c0-3c54c8bb7312",
+          "InstanceId": "02c5c54c-4633-4f07-9dd7-2e4662b3569e",
+          "Name": "Length",
+          "Nickname": "L",
+          "Description": "Length of rectangle curve",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Number",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 1981.0,
+        "Y": 397.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "a36f8c3f-a2da-46a5-85b4-d0f6caa50e89",
+        "Name": "Curve Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for curve creation, manipulation and analysis"
+      },
+      "DocumentInstanceId": "777697b0-93f2-4c98-a11a-5684e79df753"
+    },
+    {
+      "Id": "4a9e9a8e-0943-4438-b360-129c30f2bb0f",
+      "InstanceId": "38dcef2f-8774-4297-96b4-64f6dc51cdc5",
+      "Name": "Surface Closest Point",
+      "Nickname": "Srf CP",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [
+        "CP",
+        "Nearest"
+      ],
+      "Description": "Find the closest point on a surface.",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Surface",
+      "SubCategory": "Analysis",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "fbac3e32-f100-4292-8692-77240a42fd1a",
+          "InstanceId": "66d6a1ec-5a56-4d40-bf70-d44131c04a3d",
+          "Name": "Point",
+          "Nickname": "P",
+          "Description": "Sample point",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Point",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "4f8984c4-7c7a-4d69-b0a2-183cbb330d20"
+          ],
+          "ConnectedInstanceIds": [
+            "3fd4a191-a5f3-4b0e-9ec4-a55c5aaf7986"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "deaf8653-5528-4286-807c-3de8b8dad781",
+          "InstanceId": "48e764b3-8d88-4641-94a1-07d28495f501",
+          "Name": "Surface",
+          "Nickname": "S",
+          "Description": "Base surface",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Surface",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "8ec86459-bf01-4409-baee-174d0d2b13d0"
+          ],
+          "ConnectedInstanceIds": [
+            "cd96de5e-da8b-4c96-b85b-9115d42425b6"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "fbac3e32-f100-4292-8692-77240a42fd1a",
+          "InstanceId": "e794b4c0-364f-45f1-b913-946381b8842a",
+          "Name": "Point",
+          "Nickname": "P",
+          "Description": "Closest point",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Point",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        },
+        {
+          "Id": "fbac3e32-f100-4292-8692-77240a42fd1a",
+          "InstanceId": "7d6d1480-e2f0-4ca4-95b2-cbafacf38c70",
+          "Name": "UV Point",
+          "Nickname": "uvP",
+          "Description": "{uv} coordinates of closest point",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Point",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "fbac3e32-f100-4292-8692-77240a42fd1a"
+          ],
+          "ConnectedInstanceIds": [
+            "516d13bc-11dd-4685-8bbb-e6261e22ddf0"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "3e8ca6be-fda8-4aaf-b5c0-3c54c8bb7312",
+          "InstanceId": "a66954f3-33a8-4629-899d-c01ab8143def",
+          "Name": "Distance",
+          "Nickname": "D",
+          "Description": "Distance between sample point and surface",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Number",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 1650.0,
+        "Y": 213.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "f1d28eeb-c3f6-47ce-a960-2db91135ff94",
+        "Name": "Surface Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for surface, brep and mesh operations"
+      },
+      "DocumentInstanceId": "777697b0-93f2-4c98-a11a-5684e79df753"
+    },
+    {
+      "Id": "353b206e-bde5-4f02-a913-b3b8a977d4b9",
+      "InstanceId": "558d034a-d696-453e-aa12-91265e53b403",
+      "Name": "Evaluate Surface",
+      "Nickname": "EvalSrf",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "Evaluate local surface properties at a {uv} coordinate.",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Surface",
+      "SubCategory": "Analysis",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "deaf8653-5528-4286-807c-3de8b8dad781",
+          "InstanceId": "622feb98-6716-4f47-8c9d-2151e7179f8d",
+          "Name": "Surface",
+          "Nickname": "S",
+          "Description": "Base surface",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Surface",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "8ec86459-bf01-4409-baee-174d0d2b13d0"
+          ],
+          "ConnectedInstanceIds": [
+            "cd96de5e-da8b-4c96-b85b-9115d42425b6"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "fbac3e32-f100-4292-8692-77240a42fd1a",
+          "InstanceId": "516d13bc-11dd-4685-8bbb-e6261e22ddf0",
+          "Name": "Point",
+          "Nickname": "uv",
+          "Description": "{uv} coordinate to evaluate",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Point",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "fbac3e32-f100-4292-8692-77240a42fd1a"
+          ],
+          "ConnectedInstanceIds": [
+            "7d6d1480-e2f0-4ca4-95b2-cbafacf38c70"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "fbac3e32-f100-4292-8692-77240a42fd1a",
+          "InstanceId": "a61a5f31-e430-4145-912b-2b8093f37e16",
+          "Name": "Point",
+          "Nickname": "P",
+          "Description": "Point at {uv}",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Point",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        },
+        {
+          "Id": "16ef3e75-e315-4899-b531-d3166b42dac9",
+          "InstanceId": "09de6525-749d-4e68-b6a4-4fb360b8f361",
+          "Name": "Normal",
+          "Nickname": "N",
+          "Description": "Normal at {uv}",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Vector",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "16ef3e75-e315-4899-b531-d3166b42dac9"
+          ],
+          "ConnectedInstanceIds": [
+            "0406922d-53b7-43a9-9734-16cf874049ac"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "16ef3e75-e315-4899-b531-d3166b42dac9",
+          "InstanceId": "ded7d873-b4c0-44ee-ace0-3f2395f511de",
+          "Name": "U direction",
+          "Nickname": "U",
+          "Description": "U direction at {uv}",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Vector",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        },
+        {
+          "Id": "16ef3e75-e315-4899-b531-d3166b42dac9",
+          "InstanceId": "b817c29b-466e-4ee3-bb00-2a606e07592a",
+          "Name": "V direction",
+          "Nickname": "V",
+          "Description": "V direction at {uv}",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Vector",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        },
+        {
+          "Id": "4f8984c4-7c7a-4d69-b0a2-183cbb330d20",
+          "InstanceId": "23b67496-091c-4029-ad33-61e8a471d2c4",
+          "Name": "Frame",
+          "Nickname": "F",
+          "Description": "Frame at {uv}",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Plane",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 1768.0,
+        "Y": 168.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "f1d28eeb-c3f6-47ce-a960-2db91135ff94",
+        "Name": "Surface Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for surface, brep and mesh operations"
+      },
+      "DocumentInstanceId": "777697b0-93f2-4c98-a11a-5684e79df753"
+    },
+    {
+      "Id": "e76040ec-3b91-41e1-8e00-c74c23b89391",
+      "InstanceId": "6abc8ecb-fc64-474e-9c8a-1433f967d0aa",
+      "Name": "Align Plane",
+      "Nickname": "Align",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "Perform minimal rotation to align a plane with a guide vector",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Vector",
+      "SubCategory": "Plane",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "4f8984c4-7c7a-4d69-b0a2-183cbb330d20",
+          "InstanceId": "134fa717-d076-4b2d-8b01-68846c3a3f27",
+          "Name": "Plane",
+          "Nickname": "P",
+          "Description": "Plane to straighten",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Plane",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "4f8984c4-7c7a-4d69-b0a2-183cbb330d20"
+          ],
+          "ConnectedInstanceIds": [
+            "3fd4a191-a5f3-4b0e-9ec4-a55c5aaf7986"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "16ef3e75-e315-4899-b531-d3166b42dac9",
+          "InstanceId": "0406922d-53b7-43a9-9734-16cf874049ac",
+          "Name": "Direction",
+          "Nickname": "D",
+          "Description": "Straightening guide direction",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Vector",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "16ef3e75-e315-4899-b531-d3166b42dac9"
+          ],
+          "ConnectedInstanceIds": [
+            "09de6525-749d-4e68-b6a4-4fb360b8f361"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "4f8984c4-7c7a-4d69-b0a2-183cbb330d20",
+          "InstanceId": "a31590e5-0f97-41b9-bfd3-d62e4a7c948e",
+          "Name": "Plane",
+          "Nickname": "P",
+          "Description": "Straightened plane",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Plane",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "4f8984c4-7c7a-4d69-b0a2-183cbb330d20"
+          ],
+          "ConnectedInstanceIds": [
+            "da426d15-fafb-41b8-9e22-7de46f52780c"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "3e8ca6be-fda8-4aaf-b5c0-3c54c8bb7312",
+          "InstanceId": "1a9ea936-3fa3-4294-b228-564906e311d4",
+          "Name": "Angle",
+          "Nickname": "A",
+          "Description": "Rotation angle",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Number",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 1876.0,
+        "Y": 344.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "6029726d-3429-42ad-8023-62e9c9cf94ec",
+        "Name": "Vector Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for point, vector and plane operations"
+      },
+      "DocumentInstanceId": "777697b0-93f2-4c98-a11a-5684e79df753"
+    },
+    {
+      "Id": "bb6666e7-d0f4-41ec-a257-df2371619f13",
+      "InstanceId": "2ede7d5d-5758-47c5-ab85-f777b3bf33b3",
+      "Name": "Sweep1",
+      "Nickname": "Swp1",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "Create a sweep surface with one rail curve.",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Surface",
+      "SubCategory": "Freeform",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "d5967b9f-e8ee-436b-a8ad-29fdcecf32d5",
+          "InstanceId": "9fb43bac-9b83-4300-a5da-9d3a997fb96e",
+          "Name": "Rail",
+          "Nickname": "R",
+          "Description": "Rail curve",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Curve",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "d5967b9f-e8ee-436b-a8ad-29fdcecf32d5"
+          ],
+          "ConnectedInstanceIds": [
+            "e188d1d1-a7ee-4b80-b369-942a80da49a5"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "d5967b9f-e8ee-436b-a8ad-29fdcecf32d5",
+          "InstanceId": "377cb9fd-19c7-4b8a-bc30-c26a2a9019d8",
+          "Name": "Sections",
+          "Nickname": "S",
+          "Description": "Section curves",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Curve",
+          "Access": "list",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "8ec86459-bf01-4409-baee-174d0d2b13d0"
+          ],
+          "ConnectedInstanceIds": [
+            "14cf479d-b004-4e20-ba2f-acf7acc59886"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "2e3ab970-8545-46bb-836c-1c11e5610bce",
+          "InstanceId": "f6cbe239-d331-43d7-8f61-c866cc4bb113",
+          "Name": "Miter",
+          "Nickname": "M",
+          "Description": "Kink miter type (0=None, 1=Trim, 2=Rotate)",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Integer",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        },
+        {
+          "Id": "919e146f-30ae-4aae-be34-4d72f555e7da",
+          "InstanceId": "10301dd5-757f-4cff-81a9-bebfb889a3eb",
+          "Name": "Brep",
+          "Nickname": "S",
+          "Description": "Resulting Brep",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Brep",
+          "Access": "list",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "ac2bc2cb-70fb-4dd5-9c78-7e1ea97fe278"
+          ],
+          "ConnectedInstanceIds": [
+            "20197f88-9d3f-4bd0-bcb0-a306f2ce35c3"
+          ],
+          "ConnectedCount": 1
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 2138.0,
+        "Y": 330.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "f1d28eeb-c3f6-47ce-a960-2db91135ff94",
+        "Name": "Surface Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for surface, brep and mesh operations"
+      },
+      "DocumentInstanceId": "777697b0-93f2-4c98-a11a-5684e79df753"
+    },
+    {
+      "Id": "537b0419-bbc2-4ff4-bf08-afe526367b2c",
+      "InstanceId": "77933491-6b65-433b-ba33-693b912beae8",
+      "Name": "Custom Preview",
+      "Nickname": "Preview",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "Allows for customized geometry previews",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Display",
+      "SubCategory": "Preview",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "ac2bc2cb-70fb-4dd5-9c78-7e1ea97fe278",
+          "InstanceId": "20197f88-9d3f-4bd0-bcb0-a306f2ce35c3",
+          "Name": "Geometry",
+          "Nickname": "G",
+          "Description": "Geometry to preview",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Geometry",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "919e146f-30ae-4aae-be34-4d72f555e7da"
+          ],
+          "ConnectedInstanceIds": [
+            "10301dd5-757f-4cff-81a9-bebfb889a3eb"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "288cfe66-f3dc-4c9a-bb96-ef81f47fe724",
+          "InstanceId": "413bd00a-b08c-4787-b3f1-3a7962c5acd0",
+          "Name": "Material",
+          "Nickname": "M",
+          "Description": "The material override",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Shader",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "9c53bac0-ba66-40bd-8154-ce9829b9db1a"
+          ],
+          "ConnectedInstanceIds": [
+            "70f5638c-0dcd-4452-8470-ea110d135d5e"
+          ],
+          "ConnectedCount": 1
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 2273.0,
+        "Y": 381.0
+      },
+      "Message": "",
+      "Plugin": {
+        "Id": "e0d8b0dc-549e-442b-91bb-f975c585c42a",
+        "Name": "Grasshopper",
+        "Version": "1.0.0008",
+        "Description": "Grasshopper core library"
+      },
+      "DocumentInstanceId": "777697b0-93f2-4c98-a11a-5684e79df753"
+    }
+  ]
+}

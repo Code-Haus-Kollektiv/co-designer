@@ -1,0 +1,725 @@
+{
+  "Id": "f4887e71-5d1e-4c63-b8fe-930fc0b47ad7",
+  "Title": "4onATGEFRlJFNnNazCa6y9JmZW4",
+  "Description": "A json object of a Grasshopper file, containing JSON objects of all the 13 IGH_Component.",
+  "FileName": "4onATGEFRlJFNnNazCa6y9JmZW4.gh",
+  "AuthorName": "Measure",
+  "AuthorLikes": 32,
+  "AuthorPostCount": 32,
+  "TopicName": "Multiple Get String",
+  "ObjectCount": 13,
+  "CreatedAt": "2024-12-27T21:44:24.857+01:00",
+  "PostUrl": "https://discourse.mcneel.com/t/multiple-get-string/197015/32",
+  "Components": [
+    {
+      "Id": "9df5e896-552d-4c8c-b9ca-4fc147ffa022",
+      "InstanceId": "f2bcfb22-baaf-4ef4-b839-b10b30d749ba",
+      "Name": "Expression",
+      "Nickname": "Expression",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "Evaluate an expression",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Maths",
+      "SubCategory": "Script",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "ba80fd98-91a1-4958-b6a7-a94e40e52bdb",
+          "InstanceId": "697d546c-dfca-4763-b999-21734749f41d",
+          "Name": "s",
+          "Nickname": "s",
+          "Description": "'s' value used to evaluate 's=\"yes\"'",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Expression Variant",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "fed87bdd-8327-49cd-949c-09d70f3c345c"
+          ],
+          "ConnectedInstanceIds": [
+            "90c3a1b9-188b-48f7-93c0-b864e2c4453c"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "8ec86459-bf01-4409-baee-174d0d2b13d0",
+          "InstanceId": "9cae89ba-8108-4bd3-b771-1bb3de921615",
+          "Name": "Result",
+          "Nickname": "R",
+          "Description": "Result of expression",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "2e3ab970-8545-46bb-836c-1c11e5610bce",
+            "8ec86459-bf01-4409-baee-174d0d2b13d0"
+          ],
+          "ConnectedInstanceIds": [
+            "d24217dc-06fa-4aec-8251-9867fda2861d",
+            "5c04dcf0-b531-4744-873a-50db88a1f82c"
+          ],
+          "ConnectedCount": 2
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 468.0,
+        "Y": 153.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "886f2422-b93f-4134-99c4-8a87bbad5fc4",
+        "Name": "Math Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for various mathematical and programmatic operations"
+      },
+      "DocumentInstanceId": "f4887e71-5d1e-4c63-b8fe-930fc0b47ad7"
+    },
+    {
+      "Id": "59daf374-bc21-4a5e-8282-5504fb7ae9ae",
+      "InstanceId": "8e3cf9c8-8f99-4993-8060-27c163046627",
+      "Name": "List Item",
+      "Nickname": "Item",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "Retrieve a specific item from a list.",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Sets",
+      "SubCategory": "List",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "8ec86459-bf01-4409-baee-174d0d2b13d0",
+          "InstanceId": "67756811-9b94-4e06-ade0-9223a5fb0726",
+          "Name": "List",
+          "Nickname": "L",
+          "Description": "Base list",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "list",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "59e0b89a-e487-49f8-bab8-b5bab16be14c"
+          ],
+          "ConnectedInstanceIds": [
+            "067ad6cb-40e3-420b-9b92-849e2995b990"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "2e3ab970-8545-46bb-836c-1c11e5610bce",
+          "InstanceId": "d24217dc-06fa-4aec-8251-9867fda2861d",
+          "Name": "Index",
+          "Nickname": "i",
+          "Description": "Item index",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Integer",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "8ec86459-bf01-4409-baee-174d0d2b13d0"
+          ],
+          "ConnectedInstanceIds": [
+            "9cae89ba-8108-4bd3-b771-1bb3de921615"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "cb95db89-6165-43b6-9c41-5702bc5bf137",
+          "InstanceId": "d4ad5d0a-a9d5-434c-8b12-6341acba6200",
+          "Name": "Wrap",
+          "Nickname": "W",
+          "Description": "Wrap index to list bounds",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Boolean",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        },
+        {
+          "Id": "8ec86459-bf01-4409-baee-174d0d2b13d0",
+          "InstanceId": "60b518c8-dd15-4d11-958c-8334149f1a29",
+          "Name": "Item",
+          "Nickname": "i",
+          "Description": "Item at {i'}",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": false,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "fed87bdd-8327-49cd-949c-09d70f3c345c"
+          ],
+          "ConnectedInstanceIds": [
+            "d74376ae-7f74-46eb-9885-2d3792a96c12"
+          ],
+          "ConnectedCount": 1
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 655.0,
+        "Y": 153.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "886f2422-b93f-4134-99c4-8a87bbad5fc4",
+        "Name": "Math Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for various mathematical and programmatic operations"
+      },
+      "DocumentInstanceId": "f4887e71-5d1e-4c63-b8fe-930fc0b47ad7"
+    },
+    {
+      "Id": "9df5e896-552d-4c8c-b9ca-4fc147ffa022",
+      "InstanceId": "40747bc8-05ac-4332-96fb-5d8eaac8b6d0",
+      "Name": "Expression",
+      "Nickname": "Expression",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "Evaluate an expression",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Maths",
+      "SubCategory": "Script",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "ba80fd98-91a1-4958-b6a7-a94e40e52bdb",
+          "InstanceId": "f6332897-4dfb-4274-8814-6d91037cde0a",
+          "Name": "s",
+          "Nickname": "s",
+          "Description": "'s' value used to evaluate 's=\"yes\"'",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Expression Variant",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "fed87bdd-8327-49cd-949c-09d70f3c345c"
+          ],
+          "ConnectedInstanceIds": [
+            "d74376ae-7f74-46eb-9885-2d3792a96c12"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "8ec86459-bf01-4409-baee-174d0d2b13d0",
+          "InstanceId": "96e8b52f-e7af-4c00-a84e-a9fca0fb2f06",
+          "Name": "Result",
+          "Nickname": "R",
+          "Description": "Result of expression",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "8ec86459-bf01-4409-baee-174d0d2b13d0"
+          ],
+          "ConnectedInstanceIds": [
+            "54c3f123-627b-4ff7-918c-67b223145b88"
+          ],
+          "ConnectedCount": 1
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 901.0,
+        "Y": 194.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "886f2422-b93f-4134-99c4-8a87bbad5fc4",
+        "Name": "Math Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for various mathematical and programmatic operations"
+      },
+      "DocumentInstanceId": "f4887e71-5d1e-4c63-b8fe-930fc0b47ad7"
+    },
+    {
+      "Id": "73215ec5-0eb5-4f85-9e07-b09c4590ce2b",
+      "InstanceId": "98dd2387-f97d-40d1-9ceb-afc8ac13955b",
+      "Name": "Context Print",
+      "Nickname": "Context Print",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "Textual data to print at the end of the GrasshopperPlayer command.",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Params",
+      "SubCategory": "Util",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "3ede854e-c753-40eb-84cb-b48008f14fd4",
+          "InstanceId": "50053e3d-5728-4d80-8e18-51eae4aa54f8",
+          "Name": "Text",
+          "Nickname": "Tx",
+          "Description": "Text for printing.",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Text",
+          "Access": "tree",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "8ec86459-bf01-4409-baee-174d0d2b13d0"
+          ],
+          "ConnectedInstanceIds": [
+            "92ee549c-2579-406c-8a1a-7ac5b4c718cd"
+          ],
+          "ConnectedCount": 1
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 1250.0,
+        "Y": 200.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "a36f8c3f-a2da-46a5-85b4-d0f6caa50e89",
+        "Name": "Curve Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for curve creation, manipulation and analysis"
+      },
+      "DocumentInstanceId": "f4887e71-5d1e-4c63-b8fe-930fc0b47ad7"
+    },
+    {
+      "Id": "59daf374-bc21-4a5e-8282-5504fb7ae9ae",
+      "InstanceId": "0147b1bb-e807-44cd-8d50-75da7e568acb",
+      "Name": "List Item",
+      "Nickname": "Item",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "Retrieve a specific item from a list.",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Sets",
+      "SubCategory": "List",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "8ec86459-bf01-4409-baee-174d0d2b13d0",
+          "InstanceId": "66e62aba-e64a-4f63-9d3a-1b7f2480a682",
+          "Name": "List",
+          "Nickname": "L",
+          "Description": "Base list",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "list",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "59e0b89a-e487-49f8-bab8-b5bab16be14c"
+          ],
+          "ConnectedInstanceIds": [
+            "28d85973-f7ff-48b9-b61d-3990f0a26997"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "2e3ab970-8545-46bb-836c-1c11e5610bce",
+          "InstanceId": "00ecda83-4fbd-4625-a97c-86320f3151f8",
+          "Name": "Index",
+          "Nickname": "i",
+          "Description": "Item index",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Integer",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "8ec86459-bf01-4409-baee-174d0d2b13d0"
+          ],
+          "ConnectedInstanceIds": [
+            "6796c7dd-d0c2-47c8-bb80-2a475e7e278b"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "cb95db89-6165-43b6-9c41-5702bc5bf137",
+          "InstanceId": "7de76af4-f844-4bb6-a40d-e181462efa09",
+          "Name": "Wrap",
+          "Nickname": "W",
+          "Description": "Wrap index to list bounds",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Boolean",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        },
+        {
+          "Id": "8ec86459-bf01-4409-baee-174d0d2b13d0",
+          "InstanceId": "92ee549c-2579-406c-8a1a-7ac5b4c718cd",
+          "Name": "Item",
+          "Nickname": "i",
+          "Description": "Item at {i'}",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": false,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "3ede854e-c753-40eb-84cb-b48008f14fd4"
+          ],
+          "ConnectedInstanceIds": [
+            "50053e3d-5728-4d80-8e18-51eae4aa54f8"
+          ],
+          "ConnectedCount": 1
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 1158.0,
+        "Y": 200.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "886f2422-b93f-4134-99c4-8a87bbad5fc4",
+        "Name": "Math Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for various mathematical and programmatic operations"
+      },
+      "DocumentInstanceId": "f4887e71-5d1e-4c63-b8fe-930fc0b47ad7"
+    },
+    {
+      "Id": "ce46b74e-00c9-43c4-805a-193b69ea4a11",
+      "InstanceId": "319f2f13-0937-4f1c-b21d-daa124844fde",
+      "Name": "Multiplication",
+      "Nickname": "A×B",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "Mathematical multiplication",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Maths",
+      "SubCategory": "Operators",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "8ec86459-bf01-4409-baee-174d0d2b13d0",
+          "InstanceId": "5c04dcf0-b531-4744-873a-50db88a1f82c",
+          "Name": "A",
+          "Nickname": "A",
+          "Description": "First item for multiplication",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "8ec86459-bf01-4409-baee-174d0d2b13d0"
+          ],
+          "ConnectedInstanceIds": [
+            "9cae89ba-8108-4bd3-b771-1bb3de921615"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "8ec86459-bf01-4409-baee-174d0d2b13d0",
+          "InstanceId": "345091ad-71cf-457b-a38d-04f3c101caf0",
+          "Name": "B",
+          "Nickname": "B",
+          "Description": "Second item for multiplication",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "59e0b89a-e487-49f8-bab8-b5bab16be14c"
+          ],
+          "ConnectedInstanceIds": [
+            "af1e92a1-4111-49f5-9d21-e649301991b2"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "8ec86459-bf01-4409-baee-174d0d2b13d0",
+          "InstanceId": "dd19d37b-ae0d-42bf-b986-a2c066d15381",
+          "Name": "Result",
+          "Nickname": "R",
+          "Description": "Result of multiplication",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "8ec86459-bf01-4409-baee-174d0d2b13d0"
+          ],
+          "ConnectedInstanceIds": [
+            "306b6261-4c6e-4623-893b-a04781041e1a"
+          ],
+          "ConnectedCount": 1
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 579.0,
+        "Y": 222.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "886f2422-b93f-4134-99c4-8a87bbad5fc4",
+        "Name": "Math Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for various mathematical and programmatic operations"
+      },
+      "DocumentInstanceId": "f4887e71-5d1e-4c63-b8fe-930fc0b47ad7"
+    },
+    {
+      "Id": "a0d62394-a118-422d-abb3-6af115c75b25",
+      "InstanceId": "4b1b64b4-a245-4ff6-adff-fb8fcbb31527",
+      "Name": "Addition",
+      "Nickname": "A+B",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "Mathematical addition",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Maths",
+      "SubCategory": "Operators",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "8ec86459-bf01-4409-baee-174d0d2b13d0",
+          "InstanceId": "54c3f123-627b-4ff7-918c-67b223145b88",
+          "Name": "A",
+          "Nickname": "A",
+          "Description": "First item for addition",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "8ec86459-bf01-4409-baee-174d0d2b13d0"
+          ],
+          "ConnectedInstanceIds": [
+            "96e8b52f-e7af-4c00-a84e-a9fca0fb2f06"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "8ec86459-bf01-4409-baee-174d0d2b13d0",
+          "InstanceId": "306b6261-4c6e-4623-893b-a04781041e1a",
+          "Name": "B",
+          "Nickname": "B",
+          "Description": "Second item for addition",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "8ec86459-bf01-4409-baee-174d0d2b13d0"
+          ],
+          "ConnectedInstanceIds": [
+            "dd19d37b-ae0d-42bf-b986-a2c066d15381"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "8ec86459-bf01-4409-baee-174d0d2b13d0",
+          "InstanceId": "6796c7dd-d0c2-47c8-bb80-2a475e7e278b",
+          "Name": "Result",
+          "Nickname": "R",
+          "Description": "Result of addition",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "2e3ab970-8545-46bb-836c-1c11e5610bce"
+          ],
+          "ConnectedInstanceIds": [
+            "00ecda83-4fbd-4625-a97c-86320f3151f8"
+          ],
+          "ConnectedCount": 1
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 1036.0,
+        "Y": 204.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "886f2422-b93f-4134-99c4-8a87bbad5fc4",
+        "Name": "Math Components",
+        "Version": "8.14.24345.15001",
+        "Description": "Provides components for various mathematical and programmatic operations"
+      },
+      "DocumentInstanceId": "f4887e71-5d1e-4c63-b8fe-930fc0b47ad7"
+    }
+  ]
+}

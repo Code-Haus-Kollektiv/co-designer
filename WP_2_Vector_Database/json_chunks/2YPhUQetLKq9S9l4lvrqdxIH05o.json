@@ -1,0 +1,152 @@
+{
+  "Id": "379705c7-4148-4c24-9a42-cbd5af12137a",
+  "Title": "2YPhUQetLKq9S9l4lvrqdxIH05o",
+  "Description": "A json object of a Grasshopper file, containing JSON objects of all the 5 IGH_Component.",
+  "FileName": "2YPhUQetLKq9S9l4lvrqdxIH05o.gh",
+  "AuthorName": "nbarnes",
+  "AuthorLikes": 14,
+  "AuthorPostCount": 2,
+  "TopicName": "GET JSON from URL",
+  "ObjectCount": 5,
+  "CreatedAt": "2022-09-24T19:33:44.853+02:00",
+  "PostUrl": "https://discourse.mcneel.com/t/get-json-from-url/148180/2",
+  "Components": [
+    {
+      "Id": "410755b1-224a-4c1e-a407-bf32fb45ea7e",
+      "InstanceId": "9ad29d79-aa29-447f-8aa2-df481a833813",
+      "Name": "GhPython Script",
+      "Nickname": "Python",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "GET json from url\r\n    source for code: https://gist.github.com/aictrl/71a3aa25034baff68e46454e0607280c",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Maths",
+      "SubCategory": "Script",
+      "IsObsolete": true,
+      "Parameters": [
+        {
+          "Id": "84fa917c-1ed8-4db3-8be1-7bdc4a6495a2",
+          "InstanceId": "99d1c503-0e8c-4f29-ae39-2ce08dde5477",
+          "Name": "Run",
+          "Nickname": "Run",
+          "Description": "start url operation",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "2e78987b-9dfb-42a2-8b76-3923ac8bd91a"
+          ],
+          "ConnectedInstanceIds": [
+            "8602401f-eb4d-4057-8ed5-8e0311688b6f"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "84fa917c-1ed8-4db3-8be1-7bdc4a6495a2",
+          "InstanceId": "a5809cd1-e223-45d8-832b-3170139e6cb0",
+          "Name": "method",
+          "Nickname": "method",
+          "Description": "this is GET/POST - for retireving info use GET",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "59e0b89a-e487-49f8-bab8-b5bab16be14c"
+          ],
+          "ConnectedInstanceIds": [
+            "585535ea-8337-412b-8a9d-5e88df71a41c"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "84fa917c-1ed8-4db3-8be1-7bdc4a6495a2",
+          "InstanceId": "fabb029f-caf5-4c8a-9c4f-bb9ab434c491",
+          "Name": "url",
+          "Nickname": "url",
+          "Description": "url to get/post json",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "59e0b89a-e487-49f8-bab8-b5bab16be14c"
+          ],
+          "ConnectedInstanceIds": [
+            "97844695-545a-49e8-b948-404d9a89ff8b"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "8ec86459-bf01-4409-baee-174d0d2b13d0",
+          "InstanceId": "6c50d9aa-6272-433f-88b1-9fdf78bb4651",
+          "Name": "Response",
+          "Nickname": "Response",
+          "Description": "returned JSON object",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "59e0b89a-e487-49f8-bab8-b5bab16be14c"
+          ],
+          "ConnectedInstanceIds": [
+            "998a4d2f-808b-44c6-8251-175821ca752f"
+          ],
+          "ConnectedCount": 1
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 468.0,
+        "Y": 157.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "00000000-0000-0000-0000-000000000000",
+        "Name": "",
+        "Version": "",
+        "Description": ""
+      },
+      "DocumentInstanceId": "379705c7-4148-4c24-9a42-cbd5af12137a"
+    }
+  ]
+}

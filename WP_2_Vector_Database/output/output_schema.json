@@ -1,0 +1,20 @@
+{
+"title": "next component",
+    "description": "the next connected component",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "name of component"
+        },
+        "description": {
+            "type": "string",
+            "description": "description of component"
+        },
+        "id": {
+            "type": "string",
+            "description": "GUID of component"
+        }
+    },
+    "required": ["name", "description", "id"]
+}

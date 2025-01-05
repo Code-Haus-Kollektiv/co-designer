@@ -1,0 +1,148 @@
+{
+  "Id": "dde127c0-5152-4f75-926d-3294bed8b334",
+  "Title": "pO0vbk9sxduiuSPuxhbmDrapqi2",
+  "Description": "A json object of a Grasshopper file, containing JSON objects of all the 4 IGH_Component.",
+  "FileName": "pO0vbk9sxduiuSPuxhbmDrapqi2.gh",
+  "AuthorName": "webdunce",
+  "AuthorLikes": 49,
+  "AuthorPostCount": 2,
+  "TopicName": "Culling Points with 2 out of 3 identical coordinates",
+  "ObjectCount": 4,
+  "CreatedAt": "2024-12-29T22:50:34.665+01:00",
+  "PostUrl": "https://discourse.mcneel.com/t/culling-points-with-2-out-of-3-identical-coordinates/197094/2",
+  "Components": [
+    {
+      "Id": "719467e6-7cf5-4848-99b0-c5dd57e5442c",
+      "InstanceId": "c246f8f3-8fd3-407a-9194-a9d3b0fe4756",
+      "Name": "Python 3 Script",
+      "Nickname": "Py3",
+      "Type": "Grasshopper.Kernel.IGH_Component, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+      "Keywords": [],
+      "Description": "",
+      "InstanceDescription": "This component is currently inactive.\r\n",
+      "Category": "Maths",
+      "SubCategory": "Script",
+      "IsObsolete": false,
+      "Parameters": [
+        {
+          "Id": "08908df5-fa14-4982-9ab2-1aa0927566aa",
+          "InstanceId": "5ab5b17e-133f-4eea-be5d-b13e5dad71cb",
+          "Name": "points",
+          "Nickname": "points",
+          "Description": "Converts to collection of three-dimensional points",
+          "Index": 0,
+          "ParameterType": "Input",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "list",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "fbac3e32-f100-4292-8692-77240a42fd1a"
+          ],
+          "ConnectedInstanceIds": [
+            "f29d22bf-e61a-4914-a4bb-b92c9533682f"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "3ede854e-c753-40eb-84cb-b48008f14fd4",
+          "InstanceId": "5e293a8a-8bc7-4ccd-a4d7-6c98d15594ec",
+          "Name": "out",
+          "Nickname": "out",
+          "Description": "The execution information, as output and error streams",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Text",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": null,
+          "ConnectedInstanceIds": null,
+          "ConnectedCount": 0
+        },
+        {
+          "Id": "08908df5-fa14-4982-9ab2-1aa0927566aa",
+          "InstanceId": "15f9d929-4a26-46e9-930e-c35501195edd",
+          "Name": "highest_points",
+          "Nickname": "highest_points",
+          "Description": "rhinoscriptsyntax geometry",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "fbac3e32-f100-4292-8692-77240a42fd1a"
+          ],
+          "ConnectedInstanceIds": [
+            "0531a6d8-560a-4330-9dfb-df4ac36a2eb2"
+          ],
+          "ConnectedCount": 1
+        },
+        {
+          "Id": "08908df5-fa14-4982-9ab2-1aa0927566aa",
+          "InstanceId": "b7badc25-3f47-41d2-aa14-bf542a0f1241",
+          "Name": "lowest_points",
+          "Nickname": "lowest_points",
+          "Description": "rhinoscriptsyntax geometry",
+          "Index": 0,
+          "ParameterType": "Output",
+          "DataType": "Grasshopper.Kernel.GH_ParamData, Grasshopper, Version=8.14.24345.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803",
+          "TypeName": "Generic Data",
+          "Access": "item",
+          "DataMapping": "None",
+          "IsReversed": false,
+          "IsSimplified": false,
+          "IsLocked": false,
+          "IsNickNameMutable": true,
+          "WireDisplay": "default",
+          "VolatileData": [],
+          "VolatileDataCount": 0,
+          "ConnectedIds": [
+            "fbac3e32-f100-4292-8692-77240a42fd1a"
+          ],
+          "ConnectedInstanceIds": [
+            "10f17144-3884-4dc7-b103-797e976e9a89"
+          ],
+          "ConnectedCount": 1
+        }
+      ],
+      "IsLocked": false,
+      "IsHidden": false,
+      "Pivot": {
+        "X": 444.0,
+        "Y": 280.0
+      },
+      "Message": null,
+      "Plugin": {
+        "Id": "066d0a87-236f-4eae-a0f4-9e42f5327962",
+        "Name": "RhinoCodePluginGH",
+        "Version": "",
+        "Description": ""
+      },
+      "DocumentInstanceId": "dde127c0-5152-4f75-926d-3294bed8b334"
+    }
+  ]
+}
