@@ -21,11 +21,11 @@ namespace Preprocess
         static void Main(string[] args)
         {
             var documents = ReadMetaDataCsv();
+            documents.Reverse();
 
             using (var core = new Rhino.Runtime.InProcess.RhinoCore())
             {
                 InitialiseGrasshopper();
-
                 foreach (var document in documents)
                 {
                     try
@@ -51,7 +51,6 @@ namespace Preprocess
 
             }
 
-            Console.ReadKey();
         }
 
         /// <summary>
@@ -83,9 +82,9 @@ namespace Preprocess
         static void InitialiseGrasshopper()
         {
             // Start grasshopper in "headless" mode
-            var gh = Rhino.PlugIns.PlugIn.LoadPlugIn(new Guid("b45a29b1-4343-4035-989e-044e8580d9cf"));
+            var gh = Rhino.PlugIns.PlugIn.LoadPlugIn(new Guid("b45a29b1-4343-4035-989e-044e8580d9cf"), true, true);
             if (!gh) throw new Exception("Failed to load Grasshopper.");
-            Console.WriteLine("Grasshopper Loaded");
+            Grasshopper.Instances.
 
         }
 
@@ -152,6 +151,7 @@ namespace Preprocess
             Console.WriteLine("GH Document with name: " + document.Document.DisplayName + "loaded");
             return document.Document;
         }
+
 
         /// <summary>
         /// Gets objects from Grasshopper canvas and returns an array of Component Objects.
@@ -221,7 +221,7 @@ namespace Preprocess
             string json = JsonConvert.SerializeObject(document, Formatting.Indented);
 
             // Write JSON to file
-            File.WriteAllText("./Results/" + document.FileName, json);
+            File.WriteAllText("./Results/" + document.FileName.Replace(".gh", ".json"), json);
 
             Console.WriteLine("Document " + document.FileName + "written successfuly.");
 
