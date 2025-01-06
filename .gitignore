@@ -10,7 +10,9 @@
 *.sln.docstates
 Files/
 Results/
-
+json_chunks/
+output/
+tests/
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
