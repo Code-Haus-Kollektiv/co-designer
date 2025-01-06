@@ -1,26 +1,31 @@
+
+# Co-Designer
+
+This repository provides tools and scripts for creating and managing a Co-Designer environment for embedding generation, similarity search, and prediction for Rhino Grasshopper components. 
+
+---
+
 ## Installation
 
-Using Conda as the python environment managewed
+Follow these steps to set up the development environment using Conda, a powerful Python environment manager.
+
+### Prerequisites
+
+Ensure you have Conda installed. If not, download and install it from [Conda's official site](https://docs.conda.io/en/latest/miniconda.html).
+
+---
+
+### Creating the Environment
+
+To create the environment, use the `environment.yml` file, use:
 
 ```bash
-conda create -n co-designer python=3.12
-conda activate co-designer
-```
-
-
-### Packages
-```bash
-conda install conda-forge::chromadb
-conda install conda-forge::colorama
-conda install conda-forge::pyautogen
-conda install conda-forge::sentence-transformers
-```
-
-### Exporting Environment
-```bash
-# Export
-conda env export > environment.yml
-# Create 
 conda env create -f environment.yml
+```
 
+## Setting Up VS Code Extensions
+
+Run the following command to install the recommended extensions:
+```bash
+xargs -n 1 code --install-extension < extensions.txt
 ```
