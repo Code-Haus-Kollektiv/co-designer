@@ -30,7 +30,7 @@ conda env export > environment.yml
 
 ## Setting Up VS Code Extensions
 
-Run the following command to install the recommended extensions:
+Run the following command to install the recommended extensions using Powershell:
 ```bash
-xargs -n 1 code --install-extension < extensions.txt
+Get-Content extensions.txt | ForEach-Object { code --install-extension $_ }
 ```
