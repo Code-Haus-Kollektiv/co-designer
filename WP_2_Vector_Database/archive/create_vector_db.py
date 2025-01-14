@@ -33,10 +33,10 @@ handler.setFormatter(formatter)
 logging.basicConfig(level=logging.INFO, handlers=[handler])
 
 # Constants
-NAME = "co-designer"
+NAME = "co-designer_nonLang"
 PERSIST_DIRECTORY = f"./output/{NAME}_db"
 COLLECTION_NAME = f"{NAME}_collection"
-JSON_FOLDER = "./json_chunks"
+JSON_FOLDER = "./json_chunks/Results"
 EXPORT_FILE = f"./output/{COLLECTION_NAME}_export.json"
 
 # Embedding function

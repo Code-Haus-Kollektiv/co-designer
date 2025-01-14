@@ -36,7 +36,7 @@ logger.addHandler(handler)
 logger.setLevel(logging.DEBUG)
 
 # Constants
-PERSIST_DIRECTORY = "./WP_2_Vector_Database/output/co-designer5_db"
+PERSIST_DIRECTORY = "./WP_2_Vector_Database/output/co-designer_nonLang_db"
 
 # GrasshopperComponent model
 class GrasshopperComponent(BaseModel):
@@ -52,9 +52,9 @@ def load_prompt_template() -> ChatPromptTemplate:
         ("human", "Current Component:{context}"),
     ])
 
-def initialize_vector_database(persist_directory: str, embedding_function) -> Chroma:
-    logger.info(f"Initializing vector database with persistence directory: {persist_directory}")
-    return Chroma(persist_directory=persist_directory, embedding_function=embedding_function)
+def initialize_vector_database(dir: str, embedding_function) -> Chroma:
+    logger.info(f"Initializing vector database with persistence directory: {dir}")
+    return Chroma(persist_directory=dir, embedding_function=embedding_function)
 
 def retrieve_documents(vectordb: Chroma, query: str, top_k: int = 5) -> List[Any]:
     logger.info("Invoking retriever...")
@@ -113,10 +113,7 @@ def process_documents(retrieved_docs: List[Any]) -> Optional[Dict[str, Any]]:
     return None
 
 def main():
-    search_item = """
-        "Name": "Vector 2Pt",
-        "Nickname": "Vec2Pt",
-    """
+    search_item = "ba80fd98-91a1-4958-b6a7-a94e40e52bdb"
 
     prompt_template = load_prompt_template()
     ollama = ChatOllama(model="llama3.2:latest")

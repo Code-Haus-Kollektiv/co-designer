@@ -23,6 +23,11 @@ To create the environment, use the `environment.yml` file, use:
 conda env create -f environment.yml
 ```
 
+### Exporting Environment
+```bash
+conda env export > environment.yml
+```
+
 ## Setting Up VS Code Extensions
 
 Run the following command to install the recommended extensions:

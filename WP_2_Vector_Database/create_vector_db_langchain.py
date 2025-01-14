@@ -34,10 +34,10 @@ handler.setFormatter(formatter)
 logging.basicConfig(level=logging.INFO, handlers=[handler])
 
 # Constants
-NAME = "co-designer"
+NAME = "co-designer2"
 PERSIST_DIRECTORY = f"./output/{NAME}_db"
 COLLECTION_NAME = f"{NAME}_collection"
-JSON_FOLDER = "./json_chunks"
+JSON_FOLDER = "./json_chunks/Results"
 EXPORT_FILE = f"./output/{COLLECTION_NAME}_export.json"
 
 # Initialize embedding function
@@ -87,11 +87,11 @@ def main() -> None:
     texts = extract_components(json_data)
     logging.info("Extracted %d components as documents.", len(texts))
 
-    # documents = extract_components(json_data)
-    # logging.info("Extracted %d components as documents.", len(documents))
+    documents = extract_components(json_data)
+    logging.info("Extracted %d components as documents.", len(documents))
 
-    # text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
-    # texts = text_splitter.split_documents(documents)
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1001, chunk_overlap=0)
+    texts = text_splitter.split_documents(documents)
 
     client_settings = chromadb.config.Settings(
         is_persistent=True,
