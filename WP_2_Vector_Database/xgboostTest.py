@@ -28,12 +28,14 @@ except ImportError:
 JSON_FOLDER = r"./WP_2_Vector_Database/json_chunks/Results"
 OUTPUT_FOLDER = r"./WP_2_Vector_Database/output"
 MODEL_NAME = "testFile"
+DEBUG_MODE = False
 
 # Utility Functions
 def load_json_files(folder_path):
     """Load and parse JSON files from a folder."""
     files = [f for f in os.listdir(folder_path) if f.endswith(".json")]
-    files = files[:100]
+    if DEBUG_MODE:
+        files = files[:100]
     components = []
     for filename in tqdm(files, desc=f"{Fore.CYAN}Reading JSON files{Style.RESET_ALL}", unit="file"):
         with open(os.path.join(folder_path, filename), encoding="utf-8") as file:
