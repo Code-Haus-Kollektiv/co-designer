@@ -31,7 +31,7 @@ except ImportError:
 JSON_FOLDER = r"./WP_2_Vector_Database/json_chunks/Results"
 OUTPUT_FOLDER = r"./WP_2_Vector_Database/output"
 MODEL_NAME = "testFile"
-DEBUG_MODE = False
+DEBUG_MODE = True
 
 # ----------------------------------------------------------------------------
 # Utility Functions
@@ -169,11 +169,11 @@ def main():
         "objective": "multi:softmax",
         "num_class": len(encoders["NextComponent"].classes_),
         "tree_method": "hist",    # Fast, histogram-based algorithm (CPU)
-        "nthread": -1             # Use all available CPU cores
+        "nthread": -1     ,        # Use all available CPU cores
         # If you have a compatible GPU, you can use:
         # "tree_method": "gpu_hist",
         # "predictor": "gpu_predictor"
-        # and optionally "gpu_id": 0 (for the first GPU).
+        # and optionally  "gpu_id": 0 (for the first GPU).
     }
 
     print(f"{Fore.CYAN}[INFO]{Style.RESET_ALL} Training XGBoost model with full CPU utilization...")
