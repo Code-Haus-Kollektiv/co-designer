@@ -12,6 +12,7 @@ Files/
 Results/
 json_chunks/
 # output/
+RAG/
 tests/
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
