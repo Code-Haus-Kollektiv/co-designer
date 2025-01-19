@@ -11,7 +11,7 @@
 Files/
 Results/
 json_chunks/
-# output/
+output/
 RAG/
 tests/
 # User-specific files (MonoDevelop/Xamarin Studio)
