@@ -10,16 +10,17 @@ using System.Windows.Forms;
 
 public class AutoInstantiateComponent : GH_Component
 {
-    private GH_Document ghDocument;
-    private string guid = Guid.NewGuid().ToString();
+    private GH_Document _ghDocument;
+    private string _guid = Guid.NewGuid().ToString();
 
     public AutoInstantiateComponent()
         : base(
               "Auto Instantiate Component",
               "AutoInst",
               "Auto Instantiate Component",
-              "Utilities",
+              "chk", 
               "co-designer")
+
     {
     }
 
@@ -28,7 +29,7 @@ public class AutoInstantiateComponent : GH_Component
     public override void AddedToDocument(GH_Document document)
     {
         base.AddedToDocument(document);
-        ghDocument = document;
+        _ghDocument = document;
 
         Instances.ActiveCanvas.DocumentObjectMouseDown += OnDocumentChanged;
         Instances.ActiveCanvas.KeyDown += OnKeyDown;
@@ -59,7 +60,7 @@ public class AutoInstantiateComponent : GH_Component
         if (selectedComponent.ComponentGuid == this.ComponentGuid)
             return;
 
-        var newComponent = Grasshopper.Instances.ComponentServer.EmitObject(Guid.Parse(guid)) as GH_Component;
+        var newComponent = Grasshopper.Instances.ComponentServer.EmitObject(Guid.Parse(_guid)) as GH_Component;
 
         if (newComponent != null)
         {
@@ -119,9 +120,9 @@ public class AutoInstantiateComponent : GH_Component
         // No outputs required for this component.
     }
 
-    protected override void SolveInstance(IGH_DataAccess DA)
+    protected override void SolveInstance(IGH_DataAccess da)
     {
-        DA.GetData(0, ref guid);
+        da.GetData(0, ref _guid);
     }
 }
 

@@ -1,39 +1,85 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	
+
   <PropertyGroup>
-    <!-- Select the framework(s) you wish to target.
-        Rhino 6: net45
-        Rhino 7: net48
-        Rhino 8 Windows: net48, net7.0, net7.0-windows, net7.0-windows10.0.22000.0, etc
-        Rhino 8 Mac: net7.0, net7.0-macos, net7.0-macos12.0, etc
-    -->
     <TargetFrameworks>net7.0;net48</TargetFrameworks>
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <TargetExt>.gha</TargetExt>
     <NoWarn>NU1701</NoWarn>
+    <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
+    <Authors>chk</Authors>
   </PropertyGroup>
-  
+
   <PropertyGroup>
-    <!-- Specifies information for Assembly and Yak -->
     <Version>1.0</Version>
     <Title>CoDesigner</Title>
     <Company>CoDesigner Authors</Company>
-    <Description>Description of CoDesigner</Description>
+    <Description></Description>
   </PropertyGroup>
-  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <WarningLevel>2</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="AutoGen" Version="0.2.1" />
     <PackageReference Include="AutoGen.Core" Version="0.2.1" />
     <PackageReference Include="AutoGen.DotnetInteractive" Version="0.2.1" />
     <PackageReference Include="AutoGen.Ollama" Version="0.2.1" />
     <PackageReference Include="Grasshopper" Version="8.0.23304.9001" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.20.1" />
+    <PackageReference Include="Microsoft.ML.OnnxRuntime.Gpu" Version="1.20.1" />
     <PackageReference Include="System.Drawing.Common" Version="9.0.0" />
+    <PackageReference Include="XGBoostSharp" Version="0.4.6" />
   </ItemGroup>
-  
+
+<!--  <ItemGroup>-->
+<!--    <EmbeddedResource Include="Resources\xgboost_model.onnx" />-->
+<!--    <EmbeddedResource Include="Resources\index_to_label.json" />-->
+<!--  </ItemGroup>-->
+
   <ItemGroup>
     <Reference Include="System.Windows.Forms">
-      <HintPath>..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Windows.Forms.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Windows.Forms.dll</HintPath>
     </Reference>
   </ItemGroup>
-  
+
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <PostBuildEvent>
+      if not exist "%AppData%\Grasshopper\Libraries\co-designer" (
+      mkdir "%AppData%\Grasshopper\Libraries\co-designer"
+      )
+
+      xcopy /Y /E /I "$(OutDir)*" "%AppData%\Grasshopper\Libraries\co-designer\"
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <FallbackCulture>en-US</FallbackCulture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartProgram>C:\Program Files\Rhino 8\System\Rhino.exe</StartProgram>
+    <StartArguments>
+    </StartArguments>
+    <StartAction>Program</StartAction>
+  </PropertyGroup>
+
 </Project>

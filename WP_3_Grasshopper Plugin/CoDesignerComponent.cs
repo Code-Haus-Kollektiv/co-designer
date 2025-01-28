@@ -27,7 +27,7 @@ namespace CoDesigner.GrasshopperComponents
             : base("OllamaAgent", 
                 "Ollama",
                 "Integrates with an Ollama Agent to send and receive messages, and optionally run code snippets.",
-                "Utilities",
+                "chk", 
                 "co-designer")
         {
         }
@@ -44,7 +44,7 @@ namespace CoDesigner.GrasshopperComponents
             pManager.AddTextParameter("Response", "Res", "Response from the Ollama Agent.", GH_ParamAccess.item);
         }
 
-        protected override async void SolveInstance(IGH_DataAccess DA)
+        protected override async void SolveInstance(IGH_DataAccess da)
         {
             string filePath;
 
@@ -63,7 +63,7 @@ namespace CoDesigner.GrasshopperComponents
             kernel.BuildAsync();
 
             string inputMessage = string.Empty;
-            if (!DA.GetData(0, ref inputMessage))
+            if (!da.GetData(0, ref inputMessage))
             {
                 AddRuntimeMessage(GH_RuntimeMessageLevel.Error, "Failed to retrieve input message.");
                 return;
@@ -83,7 +83,7 @@ namespace CoDesigner.GrasshopperComponents
 
 
             // Output the final message
-            DA.SetData(0, responseMessage);
+            da.SetData(0, responseMessage);
         }
 
         private async Task<string> InteractWithOllamaAgent(string message)
@@ -102,7 +102,7 @@ namespace CoDesigner.GrasshopperComponents
                 .RegisterMessageConnector()
                 .RegisterPrintMessage();
 
-            // You could also add your own custom “middleware” to process snippet generation here
+            // You could also add your own custom ï¿½middlewareï¿½ to process snippet generation here
             // But for simplicity, we will just get the text reply back:
             var reply = await ollamaAgent.SendAsync(message);
             return reply.GetContent();
