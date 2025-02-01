@@ -84,7 +84,6 @@ namespace Preprocess
             // Start grasshopper in "headless" mode
             var gh = Rhino.PlugIns.PlugIn.LoadPlugIn(new Guid("b45a29b1-4343-4035-989e-044e8580d9cf"), true, true);
             if (!gh) throw new Exception("Failed to load Grasshopper.");
-            Grasshopper.Instances.
 
         }
 
@@ -272,7 +271,8 @@ namespace Preprocess
             {
                 parameter.ConnectedIds = connectedParams.Select(o => o.ComponentGuid.ToString()).ToList();
                 parameter.ConnectedInstanceIds = connectedParams.Select(o => o.InstanceGuid.ToString()).ToList();
-            };
+            }
+            ;
             return parameter;
 
         }
