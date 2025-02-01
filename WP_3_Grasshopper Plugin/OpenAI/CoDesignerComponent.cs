@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Grasshopper;
 using Grasshopper.Kernel;
 using Rhino.Geometry;
-
+using OpenAI.Chat;
 
 
 namespace Codesigner
@@ -30,6 +30,9 @@ namespace Codesigner
     /// </summary>
     protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
     {
+      pManager.AddTextParameter("ApiKey", "AK", "OpenAPI key", GH_ParamAccess.item);
+      pManager.AddTextParameter("Message", "M", "Prompt", GH_ParamAccess.item);
+      pManager.AddBooleanParameter("Run", "R", "Run", GH_ParamAccess.item);
     }
 
     /// <summary>
@@ -37,6 +40,7 @@ namespace Codesigner
     /// </summary>
     protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
     {
+      pManager.AddTextParameter("Response", "R", "Prompt response", GH_ParamAccess.item);
     }
 
     /// <summary>
@@ -46,6 +50,20 @@ namespace Codesigner
     /// to store data in output parameters.</param>
     protected override void SolveInstance(IGH_DataAccess DA)
     {
+      string key = "";
+      string message = "";
+      bool run = false;
+      if (!DA.GetData(0, ref key)) { return; }
+      if (!DA.GetData(1, ref message)) { return; }
+      DA.GetData(2, ref run);
+
+      if (run)
+      {
+        var client = new ChatClient(model: "gpt-o3-mini", apiKey: key);
+        ChatCompletion completion = client.CompleteChat(message);
+        DA.SetData(0, completion.Content[0].Text);
+      }
+
     }
 
     /// <summary>

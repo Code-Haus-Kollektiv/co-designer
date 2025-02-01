@@ -24,7 +24,13 @@
   
   <ItemGroup>
     <PackageReference Include="Grasshopper" Version="8.0.23304.9001" ExcludeAssets="runtime" />
-    <PackageReference Include="OpenApi" Version="1.0.1" />
+    <PackageReference Include="OpenAI" Version="2.1.0" />
+  </ItemGroup>
+    <ItemGroup Condition=" $(TargetFramework.Contains('net48')) == 'true'">
+    <Reference Include="$(RhinoSystemDirectory)\System\RhinoCommon.dll" Private="False" />
+  </ItemGroup>
+      <ItemGroup Condition=" $(TargetFramework.Contains('net48')) == 'true'">
+    <Reference Include="$(RhinoSystemDirectory)\Plug-ins\Grasshopper\GH_IO.dll" Private="False" />
   </ItemGroup>
   
   <!-- For Windows only builds -->

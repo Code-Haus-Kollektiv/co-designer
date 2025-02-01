@@ -3,9 +3,9 @@ using System.Drawing;
 using Grasshopper;
 using Grasshopper.Kernel;
 
-namespace OpenAI
+namespace Codesigner
 {
-  public class OpenAIInfo : GH_AssemblyInfo
+  public class CodesignerInfo : GH_AssemblyInfo
   {
     public override string Name => "Co-designer";
 

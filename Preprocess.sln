@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WP_1_Data_Preparation", "WP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Preprocess", "WP_1_Data_Preparation\Preprocess\Preprocess.csproj", "{719DA3A3-0664-4249-850A-A17746EDDDE8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WP_3_Grasshopper Plugin", "WP_3_Grasshopper Plugin", "{7C324857-F23E-42B8-AB7D-2B02ACEE8EBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoDesigner", "WP_3_Grasshopper Plugin\OpenAI\CoDesigner.csproj", "{E3492E22-EEE4-4D2B-BED0-E08D3B71CE01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +24,13 @@ Global
 		{719DA3A3-0664-4249-850A-A17746EDDDE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{719DA3A3-0664-4249-850A-A17746EDDDE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{719DA3A3-0664-4249-850A-A17746EDDDE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3492E22-EEE4-4D2B-BED0-E08D3B71CE01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3492E22-EEE4-4D2B-BED0-E08D3B71CE01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3492E22-EEE4-4D2B-BED0-E08D3B71CE01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3492E22-EEE4-4D2B-BED0-E08D3B71CE01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{719DA3A3-0664-4249-850A-A17746EDDDE8} = {5ED5592C-07F5-454C-B3D2-9D72FEE88339}
+		{E3492E22-EEE4-4D2B-BED0-E08D3B71CE01} = {7C324857-F23E-42B8-AB7D-2B02ACEE8EBF}
 	EndGlobalSection
 EndGlobal
