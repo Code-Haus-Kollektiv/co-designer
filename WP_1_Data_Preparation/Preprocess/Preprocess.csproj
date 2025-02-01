@@ -7,7 +7,6 @@
   </PropertyGroup>
   <ItemGroup Condition=" $(TargetFramework.Contains('net48')) == 'true'">
     <Reference Include="$(RhinoSystemDirectory)\System\RhinoCommon.dll" Private="False" />
-    
   </ItemGroup>
       <ItemGroup Condition=" $(TargetFramework.Contains('net48')) == 'true'">
     <Reference Include="$(RhinoSystemDirectory)\Plug-ins\Grasshopper\GH_IO.dll" Private="False" />
