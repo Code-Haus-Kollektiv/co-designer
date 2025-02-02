@@ -59,7 +59,7 @@ namespace Codesigner
 
       if (run)
       {
-        var client = new ChatClient(model: "gpt-o3-mini", apiKey: key);
+        var client = new ChatClient(model: "gpt-4o", apiKey: key);
         ChatCompletion completion = client.CompleteChat(message);
         DA.SetData(0, completion.Content[0].Text);
       }
