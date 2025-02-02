@@ -9,7 +9,7 @@
     -->
     <TargetFrameworks>net48</TargetFrameworks>
     <EnableDynamicLoading>true</EnableDynamicLoading>
-    <TargetExt>.dll</TargetExt>
+    <TargetExt>.gha</TargetExt>
     <NoWarn>NU1701;NETSDK1086</NoWarn>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
   </PropertyGroup>

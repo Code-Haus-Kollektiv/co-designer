@@ -71,6 +71,11 @@ namespace Codesigner
           InstantiateComponent(doc, component);
         }
 
+        foreach (var connection in schema.Connections)
+        {
+          ConnectComponent(doc, connection);
+        }
+
 
         DA.SetData(0, JsonConvert.SerializeObject(schema));
       }
@@ -119,6 +124,24 @@ namespace Codesigner
       myProxy = Instances.ComponentServer.FindObjectByName(name, true, true);
 
       return myProxy;
+    }
+
+    public static void ConnectComponent(GH_Document doc, Connection pairing)
+    {
+      CreatedComponents.TryGetValue(pairing.From.Id, out IGH_DocumentObject componentFrom);
+      CreatedComponents.TryGetValue(pairing.To.Id, out IGH_DocumentObject componentTo);
+
+      IGH_Param fromParam = GetParam(componentFrom, pairing.From, false);
+      IGH_Param toParam = GetParam(componentTo, pairing.To, true);
+
+      if (fromParam is null || toParam is null)
+      {
+        return;
+      }
+
+      toParam.AddSource(fromParam);
+      toParam.CollectData();
+      toParam.ComputeData();
     }
 
     /// <summary>
