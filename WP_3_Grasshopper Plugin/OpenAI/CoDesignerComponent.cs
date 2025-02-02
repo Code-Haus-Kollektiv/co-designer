@@ -1,9 +1,11 @@
 using System;
-using System.Collections.Generic;
 
-using Grasshopper;
 using Grasshopper.Kernel;
-using Rhino.Geometry;
+
+using Newtonsoft.Json;
+using Codesigner.Models;
+using Grasshopper;
+using System.Linq;
 using OpenAI.Chat;
 
 
@@ -57,13 +59,66 @@ namespace Codesigner
       if (!DA.GetData(1, ref message)) { return; }
       DA.GetData(2, ref run);
 
+      var client = new GrasshopperAIClient(key);
       if (run)
       {
-        var client = new ChatClient(model: "gpt-4o", apiKey: key);
-        ChatCompletion completion = client.CompleteChat(message);
-        DA.SetData(0, completion.Content[0].Text);
+        var schema = client.GenerateGrasshopper<GrasshopperSchema>(message);
+
+
+        var doc = this.OnPingDocument();
+        foreach (var component in schema.Components)
+        {
+          InstantiateComponent(doc, component);
+        }
+
+
+        DA.SetData(0, JsonConvert.SerializeObject(schema));
       }
 
+    }
+
+    public static void InstantiateComponent(GH_Document doc, Component addition)
+    {
+      try
+      {
+        string name = addition.Name;
+        IGH_ObjectProxy myProxy = GetObject(name);
+        if (myProxy is null)
+          return;
+
+        Guid myId = myProxy.Guid;
+
+        var emit = Instances.ComponentServer.EmitObject(myId);
+
+        doc.AddObject(emit, false);
+        emit.Attributes.Pivot = new System.Drawing.PointF(x: (float)addition.Position.X, y: (float)addition.Position.Y);
+      }
+      catch
+      {
+      }
+    }
+
+    private static IGH_ObjectProxy GetObject(string name)
+    {
+      IGH_ObjectProxy[] results = Array.Empty<IGH_ObjectProxy>();
+      double[] resultWeights = new double[] { 0 };
+      Instances.ComponentServer.FindObjects(new string[] { name }, 10, ref results, ref resultWeights);
+
+      var myProxies = results.Where(ghpo => ghpo.Kind == GH_ObjectType.CompiledObject);
+
+      var _components = myProxies.OfType<IGH_Component>();
+      var _params = myProxies.OfType<IGH_Param>();
+
+      // Prefer Components to Params
+      var myProxy = myProxies.First();
+      if (_components != null)
+        myProxy = _components.FirstOrDefault() as IGH_ObjectProxy;
+      else if (myProxy != null)
+        myProxy = _params.FirstOrDefault() as IGH_ObjectProxy;
+
+      myProxy = Instances.ComponentServer.FindObjectByName(name, true, true);
+
+      return myProxy;
     }
 
     /// <summary>

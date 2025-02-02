@@ -9,7 +9,7 @@
     -->
     <TargetFrameworks>net48</TargetFrameworks>
     <EnableDynamicLoading>true</EnableDynamicLoading>
-    <TargetExt>.gha</TargetExt>
+    <TargetExt>.dll</TargetExt>
     <NoWarn>NU1701;NETSDK1086</NoWarn>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
   </PropertyGroup>
@@ -24,6 +24,8 @@
   
   <ItemGroup>
     <PackageReference Include="Grasshopper" Version="8.0.23304.9001" ExcludeAssets="runtime" />
+    <PackageReference Include="newtonsoft.json" Version="13.0.3" />
+    <PackageReference Include="newtonsoft.json.schema" Version="4.0.1" />
     <PackageReference Include="OpenAI" Version="2.1.0" />
     <PackageReference Include="System.Text.Json" Version="9.0.1" />
   </ItemGroup>
