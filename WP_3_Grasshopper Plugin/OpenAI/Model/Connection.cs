@@ -10,19 +10,19 @@ namespace Codesigner.Models
     {
         [JsonProperty("fromComponent")]
         [Description("The id of the component where the connection originates.")]
-        public string FromComponent { get; set; }
+        public string FromComponentId { get; set; }
 
         [JsonProperty("fromOutput")]
         [Description("The name of the output parameter on the source component.")]
-        public string FromOutput { get; set; }
+        public string FromOutputName { get; set; }
 
         [JsonProperty("toComponent")]
         [Description("The id of the component receiving the connection.")]
-        public string ToComponent { get; set; }
+        public string ToComponentId { get; set; }
 
         [JsonProperty("toInput")]
         [Description("The name of the input parameter on the destination component.")]
-        public string ToInput { get; set; }
+        public string ToInputName { get; set; }
     }
 
 }

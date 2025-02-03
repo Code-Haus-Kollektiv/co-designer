@@ -68,12 +68,12 @@ namespace Codesigner
         var doc = this.OnPingDocument();
         foreach (var component in schema.Components)
         {
-          InstantiateComponent(doc, component);
+          GrasshopperUtils.InstantiateComponent(doc, this, component);
         }
 
         foreach (var connection in schema.Connections)
         {
-          ConnectComponent(doc, connection);
+          GrasshopperUtils.ConnectComponent(doc, schema, connection);
         }
 
 
@@ -82,67 +82,9 @@ namespace Codesigner
 
     }
 
-    public static void InstantiateComponent(GH_Document doc, Component addition)
-    {
-      try
-      {
-        string name = addition.Name;
-        IGH_ObjectProxy myProxy = GetObject(name);
-        if (myProxy is null)
-          return;
 
-        Guid myId = myProxy.Guid;
 
-        var emit = Instances.ComponentServer.EmitObject(myId);
 
-        doc.AddObject(emit, false);
-        emit.Attributes.Pivot = new System.Drawing.PointF(x: (float)addition.Position.X, y: (float)addition.Position.Y);
-      }
-      catch
-      {
-      }
-    }
-
-    private static IGH_ObjectProxy GetObject(string name)
-    {
-      IGH_ObjectProxy[] results = Array.Empty<IGH_ObjectProxy>();
-      double[] resultWeights = new double[] { 0 };
-      Instances.ComponentServer.FindObjects(new string[] { name }, 10, ref results, ref resultWeights);
-
-      var myProxies = results.Where(ghpo => ghpo.Kind == GH_ObjectType.CompiledObject);
-
-      var _components = myProxies.OfType<IGH_Component>();
-      var _params = myProxies.OfType<IGH_Param>();
-
-      // Prefer Components to Params
-      var myProxy = myProxies.First();
-      if (_components != null)
-        myProxy = _components.FirstOrDefault() as IGH_ObjectProxy;
-      else if (myProxy != null)
-        myProxy = _params.FirstOrDefault() as IGH_ObjectProxy;
-
-      myProxy = Instances.ComponentServer.FindObjectByName(name, true, true);
-
-      return myProxy;
-    }
-
-    public static void ConnectComponent(GH_Document doc, Connection pairing)
-    {
-      CreatedComponents.TryGetValue(pairing.From.Id, out IGH_DocumentObject componentFrom);
-      CreatedComponents.TryGetValue(pairing.To.Id, out IGH_DocumentObject componentTo);
-
-      IGH_Param fromParam = GetParam(componentFrom, pairing.From, false);
-      IGH_Param toParam = GetParam(componentTo, pairing.To, true);
-
-      if (fromParam is null || toParam is null)
-      {
-        return;
-      }
-
-      toParam.AddSource(fromParam);
-      toParam.CollectData();
-      toParam.ComputeData();
-    }
 
     /// <summary>
     /// Provides an Icon for every component that will be visible in the User Interface.

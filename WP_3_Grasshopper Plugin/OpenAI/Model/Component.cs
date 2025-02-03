@@ -10,9 +10,11 @@ namespace Codesigner.Models
         [JsonProperty("id")]
         [Description("A unique identifier for the component.")]
         public string Id { get; set; }
+        [JsonIgnore]
+        public string InstanceId { get; set; }
 
         [JsonProperty("name")]
-        [Description("The name of the component in Grasshopper (e.g., 'Rectangle', 'Number Slider').")]
+        [Description("The name of the GH_Component in Grasshopper (e.g., 'Rectangle', 'Number Slider').")]
         public string Name { get; set; }
 
         [JsonProperty("category")]
