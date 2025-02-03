@@ -29,7 +29,7 @@ Grasshopper Co-designer is a plugin for Rhino / Grasshopper that leverages a lar
 
 1. Open Grasshopper.
 2. Start creating a new definition or open an existing one.
-3. Add the *co-designer* component to your canvas.
+3. Add the _co-designer_ component to your canvas.
 4. As you add components, Co-designer will suggest the next logical component to use.
 5. Accept suggestions with a single tab.
 
@@ -71,4 +71,14 @@ Grasshopper co-designer was inspired by GitHub Copilot and aims to bring similar
 ## Contact
 
 For support or questions, please open an issue on the [Issues](https://github.com/your-repo/issues) page or email us at support@grasshoppercopilot.com.
-
+<ItemGroup>
+<Reference Include="RhinoCommon">
+<HintPath>C:\Program Files\Rhino 8\System\netcore\RhinoCommon.dll</HintPath>
+</Reference>
+<Reference Include="Grasshopper">
+<HintPath>C:\Program Files\Rhino 8\Plug-ins\Grasshopper\Grasshopper.dll</HintPath>
+</Reference>
+<Reference Include="GH_IO">
+<HintPath>C:\Program Files\Rhino 8\Plug-ins\Grasshopper\GH_IO.dll</HintPath>
+</Reference>
+</ItemGroup>
