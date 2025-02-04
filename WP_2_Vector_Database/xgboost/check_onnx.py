@@ -24,23 +24,19 @@ OUTPUT_BASE_DIR = Path(r"C:\Users\Lasat\Documents\GitHub\co-designer\WP_2_Vector
 USE_GPU = True  # Set to False to use CPU
 
 # Logging level: DEBUG, INFO, WARNING, ERROR, CRITICAL
-LOG_LEVEL = 'DEBUG'
+LOG_LEVEL = 'INFO'
 
 # -----------------------------
 # End of Configuration
 # -----------------------------
 
-
 # Initialize colorama
 init(autoreset=True)
-
 
 class ColorFormatter(logging.Formatter):
     """
     Custom logging formatter to add colors based on the log level.
     """
-
-    # Define color codes for different log levels
     COLOR_CODES = {
         logging.DEBUG: Fore.CYAN,
         logging.INFO: Fore.GREEN,
@@ -48,29 +44,19 @@ class ColorFormatter(logging.Formatter):
         logging.ERROR: Fore.RED,
         logging.CRITICAL: Fore.MAGENTA + Style.BRIGHT,
     }
-
     def format(self, record):
         color = self.COLOR_CODES.get(record.levelno, Fore.WHITE)
         message = super().format(record)
         return f"{color}{message}{Style.RESET_ALL}"
 
-
 # Configure logging
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)  # Set to lowest level to allow all messages through
-
-# Create console handler and set level to DEBUG
+logger.setLevel(logging.DEBUG)
 ch = logging.StreamHandler(sys.stdout)
 ch.setLevel(logging.DEBUG)
-
-# Create and set custom formatter
-formatter = ColorFormatter(
-    fmt='%(asctime)s [%(levelname)s] %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S'
-)
+formatter = ColorFormatter(fmt='%(asctime)s [%(levelname)s] %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
 ch.setFormatter(formatter)
-
-# Add handler to the logger
+logger.handlers = []  # Clear any existing handlers
 logger.addHandler(ch)
 
 # Update logging level based on configuration
@@ -231,27 +217,23 @@ class ONNXModelTester:
     def prepare_input_data(self, input_dict: Dict[str, Any]) -> Dict[str, np.ndarray]:
         """
         Prepare input data based on feature configuration and encoders.
+        Logs the provided input dictionary and the resulting input array.
         """
         logger.info("Preparing input data based on feature configuration and encoders...")
         input_features = self.feature_config.get("feature_cols", [])
-        prepared_inputs = {}
+        logger.debug(f"Expected input features: {input_features}")
+        # Log the raw input dictionary
+        logger.debug(f"Raw input dictionary: {input_dict}")
 
-        for idx, feature in enumerate(input_features):
-            # Map feature names to model input names (assuming 'input' is a single tensor)
-            # Since model input is a single tensor, we need to prepare a single numpy array with all features
-            # This implementation assumes that the model expects a single input tensor with all features
-            # Therefore, we'll collect all feature values into a single list
-            pass  # We'll handle this differently below
-
-        # Since the model input is a single tensor named 'input', we'll prepare a single array
         input_values = []
         for feature in input_features:
-            value = input_dict.get(feature, 0)  # Default to 0 if feature is missing
+            # Default value is taken from the input dictionary; if missing, use 0.
+            value = input_dict.get(feature, 0)
 
             # Handle encoded features
             if feature == "CurrentGUID_encoded":
                 guid = input_dict.get("CurrentGUID", "Unknown_GUID")
-                if guid in self.encoders["CurrentGUID"]:
+                if guid in self.encoders.get("CurrentGUID", []):
                     encoded_value = self.encoders["CurrentGUID"].index(guid)
                 else:
                     logger.warning(f"GUID '{guid}' not found in encoder. Assigning -1.")
@@ -260,25 +242,25 @@ class ONNXModelTester:
 
             elif feature == "CurrentName_encoded":
                 name = input_dict.get("CurrentName", "Unknown_Name")
-                if name in self.encoders["CurrentName"]:
+                if name in self.encoders.get("CurrentName", []):
                     encoded_value = self.encoders["CurrentName"].index(name)
                 else:
                     logger.warning(f"Name '{name}' not found in encoder. Assigning -1.")
                     encoded_value = -1  # Handle unseen Names
                 value = encoded_value
 
-            # Append the value to the input list
             input_values.append(value)
             logger.debug(f"Feature '{feature}' processed with value: {value}")
 
-        # Convert the list to a numpy array with shape (1, num_features)
+        # Convert list to a numpy array of shape (1, num_features)
         prepared_input_array = np.array([input_values], dtype=np.float32)
-        prepared_inputs[self.input_details[0].name] = prepared_input_array
-
+        # Log the prepared input array in detail
         logger.info("Input data prepared successfully.")
         logger.debug(f"Prepared input array shape: {prepared_input_array.shape}")
         logger.debug(f"Prepared input array: {prepared_input_array}")
 
+        # Assume the model expects a single input tensor; use the name of the first input
+        prepared_inputs = {self.input_details[0].name: prepared_input_array}
         return prepared_inputs
 
     def prepare_dummy_inputs(self) -> Dict[str, Any]:
@@ -288,19 +270,16 @@ class ONNXModelTester:
         logger.info("Preparing dummy inputs for inference...")
         dummy_input = {}
         feature_cols = self.feature_config.get("feature_cols", [])
-
         for feature in feature_cols:
-            # Assign default or random values based on feature type
-            if "encoded" in feature:
-                if "CurrentGUID_encoded" in feature:
-                    dummy_input["CurrentGUID"] = "Unknown_GUID"
-                elif "CurrentName_encoded" in feature:
-                    dummy_input["CurrentName"] = "Unknown_Name"
+            # For encoded features, provide a default value
+            if feature == "CurrentGUID_encoded":
+                dummy_input["CurrentGUID"] = "Unknown_GUID"
+            elif feature == "CurrentName_encoded":
+                dummy_input["CurrentName"] = "Unknown_Name"
             elif feature.startswith("UpGUID") or feature.startswith("UpName") or feature.startswith("InpParam"):
                 dummy_input[feature] = 0  # Binary features
             else:
                 dummy_input[feature] = 0  # Numerical features
-
         logger.debug(f"Dummy input data: {dummy_input}")
         return dummy_input
 
@@ -308,7 +287,6 @@ class ONNXModelTester:
         if self.session is None:
             logger.error("Inference session is not initialized.")
             raise RuntimeError("Inference session not initialized.")
-
         logger.info("Running inference...")
         start_time = time.time()
         try:
@@ -329,24 +307,18 @@ class ONNXModelTester:
     def decode_predictions(self, outputs: List[np.ndarray]) -> List[str]:
         """
         Decode the model's output probabilities to the corresponding labels.
-        Assumes that the second output is the probabilities for each class.
+        Assumes that the output tensor with probabilities is the second output.
         """
         if not outputs:
             logger.error("No outputs to decode.")
             return []
-
         if len(outputs) < 2:
             logger.error("Expected at least two outputs ('label' and 'probabilities').")
             return []
-
-        probabilities = outputs[1]  # Assuming 'probabilities' is the second output
+        probabilities = outputs[1]  # Assuming probabilities are in the second output
         logger.debug(f"Raw output probabilities: {probabilities}")
-
-        # Get the index of the highest probability for each sample
         predicted_indices = np.argmax(probabilities, axis=1)
         logger.debug(f"Predicted class indices: {predicted_indices}")
-
-        # Map indices to labels
         predicted_labels = [self.index_to_label.get(str(idx), "Unknown") for idx in predicted_indices]
         logger.info(f"Predicted labels: {predicted_labels}")
         return predicted_labels
@@ -364,16 +336,18 @@ class ONNXModelTester:
             logger.info("No input data provided. Using dummy inputs for inference.")
             input_data = self.prepare_dummy_inputs()
 
+        # Log the input before preparing it
+        logger.info("Input provided for inference:")
+        logger.debug(json.dumps(input_data, indent=2))
+
         # Prepare inputs based on feature configuration and encoders
         prepared_inputs = self.prepare_input_data(input_data)
+        logger.info("Prepared input data:")
+        logger.debug(prepared_inputs)
 
         # Run inference
         outputs = self.run_inference(prepared_inputs)
-
-        # Display output shapes and values
         self.display_output(outputs)
-
-        # Decode predictions
         predicted_labels = self.decode_predictions(outputs)
         logger.info(f"Decoded Predicted Labels: {predicted_labels}")
 
