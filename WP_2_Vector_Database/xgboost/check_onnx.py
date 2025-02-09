@@ -27,6 +27,13 @@ USE_GPU = True  # Set to False to use CPU
 LOG_LEVEL = 'INFO'
 
 # -----------------------------
+# Test Input Parameters
+# -----------------------------
+# Change these values to test different GUIDs and Names.
+DEFAULT_CURRENT_GUID = "5e71df64-fca2-45cc-88c7-d7f6772fa7a5"
+DEFAULT_CURRENT_NAME = "Extrude"
+
+# -----------------------------
 # End of Configuration
 # -----------------------------
 
@@ -66,7 +73,6 @@ if not isinstance(numeric_level, int):
     numeric_level = logging.INFO
 logger.setLevel(numeric_level)
 logger.debug("Logging level set.")
-
 
 class ONNXModelTester:
     def __init__(self, output_base_dir: Path, use_gpu: bool = False):
@@ -355,19 +361,23 @@ class ONNXModelTester:
         self.update_paths_dynamically()
         self.test_model_inference()
 
-
 def main():
+    # Build an input dictionary using the test parameters defined at the top.
+    test_input = {
+        "CurrentGUID": DEFAULT_CURRENT_GUID,
+        "CurrentName": DEFAULT_CURRENT_NAME
+    }
     tester = ONNXModelTester(
         output_base_dir=OUTPUT_BASE_DIR,
         use_gpu=USE_GPU
     )
     try:
-        tester.test_model(base_dir=OUTPUT_BASE_DIR)
+        tester.update_paths_dynamically()
+        tester.test_model_inference(input_data=test_input)
         logger.info("ONNX model test completed successfully.")
     except Exception as e:
         logger.critical(f"ONNX model test failed: {e}")
         sys.exit(1)
-
 
 if __name__ == "__main__":
     main()
