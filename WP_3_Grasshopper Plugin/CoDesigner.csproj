@@ -60,16 +60,44 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Remove="Resources\CurrentGUID_encoder.json" />
+    <EmbeddedResource Include="Resources\CurrentGUID_encoder.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Resources\CurrentName_encoder.json" />
+    <EmbeddedResource Include="Resources\CurrentName_encoder.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Resources\DownstreamGUIDName_encoder.json" />
+    <EmbeddedResource Include="Resources\DownstreamGUIDName_encoder.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Resources\features_config.json" />
+    <EmbeddedResource Include="Resources\features_config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Resources\index_to_label.json" />
+    <EmbeddedResource Include="Resources\index_to_label.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Resources\xgboost_model.onnx" />
+    <EmbeddedResource Include="Resources\xgboost_model.onnx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
   <PropertyGroup>
-    <PostBuildEvent>
+    <PostBuildEvent>@echo off
+REM Assign the MSBuild macro value to a variable.
+SET "OutputDir=$(OutDir)"
+
+REM Create the target directory if it doesn't exist.
       if not exist "%AppData%\Grasshopper\Libraries\co-designer" (
       mkdir "%AppData%\Grasshopper\Libraries\co-designer"
       )
 
-      xcopy /Y /E /I "$(OutDir)*" "%AppData%\Grasshopper\Libraries\co-designer\"
+REM Use the defined variable to copy files.
+xcopy /Y /E /I "%OutputDir%*" "%AppData%\Grasshopper\Libraries\co-designer\"
     </PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
